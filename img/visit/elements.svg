@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="151px" height="313px" viewBox="0 0 151 313" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <g id="templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-108.000000, -1552.000000)">
+            <g id="visit" transform="translate(-232.000000, 1009.000000)">
+                <g id="Group-18" transform="translate(297.000000, 534.000000)">
+                    <path d="M160.653339,130 C181.916302,130 199.153339,112.782429 199.153339,91.5434783 C199.153339,77.3841779 186.320006,49.5363518 160.653339,8 C134.986673,49.5363518 122.153339,77.3841779 122.153339,91.5434783 C122.153339,112.782429 139.390376,130 160.653339,130 Z" id="Oval" fill="#4BC1B4" transform="translate(160.653339, 69.000000) rotate(13.000000) translate(-160.653339, -69.000000) "></path>
+                    <g id="Group-7" transform="translate(96.500000, 207.148073) rotate(-17.000000) translate(-96.500000, -207.148073) translate(29.000000, 99.648073)" fill="#94C83D">
+                        <path d="M63,207.68007 L63,0 C21,72.2651482 0,129.16595 0,170.702406 C0,212.238862 21,224.56475 63,207.68007 Z" id="Oval-Copy"></path>
+                        <path d="M135,207.68007 L135,0 C93,72.2651482 72,129.16595 72,170.702406 C72,212.238862 93,224.56475 135,207.68007 Z" id="Oval-Copy" transform="translate(103.500000, 107.500000) scale(-1, 1) translate(-103.500000, -107.500000) "></path>
+                    </g>
+                    <circle id="Oval" fill="#F5A623" cx="82.6533392" cy="42.5" r="26.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

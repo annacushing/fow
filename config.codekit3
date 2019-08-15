@@ -29,7 +29,7 @@
 		},
 	"/img/friend/friend1.jpg": {
 		"ft": 16384,
-		"iS": 106068,
+		"iS": 100094,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/friend/friend1.jpg",
@@ -40,7 +40,7 @@
 		},
 	"/img/friend/friend2.jpg": {
 		"ft": 16384,
-		"iS": 119496,
+		"iS": 113764,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/friend/friend2.jpg",
@@ -51,7 +51,7 @@
 		},
 	"/img/friend/friend3.jpg": {
 		"ft": 16384,
-		"iS": 103172,
+		"iS": 86617,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/friend/friend3.jpg",
@@ -83,7 +83,7 @@
 		},
 	"/img/hills/green-hill.png": {
 		"ft": 32768,
-		"iS": 88113,
+		"iS": 43814,
 		"oA": 0,
 		"oAP": "/img/hills/green-hill.png",
 		"oF": 0,
@@ -104,7 +104,7 @@
 		},
 	"/img/hills/yellow-hill.png": {
 		"ft": 32768,
-		"iS": 32516,
+		"iS": 22687,
 		"oA": 0,
 		"oAP": "/img/hills/yellow-hill.png",
 		"oF": 0,
@@ -156,56 +156,12 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/img/trail/gallery1.jpg": {
-		"ft": 16384,
-		"iS": 93304,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/trail/gallery1.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/img/trail/gallery2.jpg": {
-		"ft": 16384,
-		"iS": 78919,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/trail/gallery2.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/img/trail/gallery3.jpg": {
-		"ft": 16384,
-		"iS": 292309,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/trail/gallery3.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/img/trail/gallery4.jpg": {
 		"ft": 16384,
 		"iS": 235305,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/trail/gallery4.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/img/trail/gallery5.jpg": {
-		"ft": 16384,
-		"iS": 86505,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/img/trail/gallery5.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

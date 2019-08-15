@@ -1,3 +1,44 @@
 /* =============
     Visit
 ============= */
+#visit {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "visit" "visitors";
+    grid-template-rows: repeat(2, auto);
+    padding: 40px 24px 80px 24px;
+
+    h2 {
+        hyphens: auto;
+        span {
+            color: $orange;
+        }
+    }
+
+    p{
+        padding-top: 24px;
+    }
+
+    button{
+        margin: 24px 16px 0 0;
+    }
+
+    div:nth-child(1) {
+        grid-area: visit;
+    }
+
+    div:nth-child(2) {
+        grid-area: visitors;
+    }
+
+    div:nth-child(3) {
+        display: flex;
+        justify-content: flex-end;
+        img{
+            padding: 40px;
+            height: 240px;
+        }
+    }
+
+
+}

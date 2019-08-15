@@ -1,3 +1,21 @@
 /* =============
     Hero
 ============= */
+#hero{
+    div:nth-child(1){
+        height: 457px;
+        background-image: url('../img/hero/hero.jpg');
+        background-size: cover;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+    }
+
+    div:nth-child(2){
+        padding: 40px 0px;
+        display: inline-block;
+        align-self: center;
+        background: linear-gradient(180deg, $tree 40%, $agua 120%);
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1467px" height="389px" viewBox="0 0 1467 389" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Rectangle Copy 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="161.506988%" y1="50%" x2="8.96634534%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#F5DA4C" offset="0%"></stop>
+            <stop stop-color="#FEF7E1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(0.000000, -2797.000000)" fill="url(#linearGradient-1)">
+            <g id="visit" transform="translate(-47.000000, 1162.000000)">
+                <path d="M943.194164,1048.5 L975.75,1048.5 L975.75,2610.5 L943.194164,2610.5 L736.179294,2609.42905 C801.114425,2425.83623 832.362226,2253.88974 829.922697,2093.58959 C826.263402,1853.13935 587.75,1657.01434 587.75,1381.31552 C587.75,1197.51631 668.474232,1087.10946 829.922697,1050.09496 L943.194164,1048.5 Z" id="Rectangle-Copy-12" transform="translate(781.750000, 1829.500000) rotate(-270.000000) translate(-781.750000, -1829.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

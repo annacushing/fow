@@ -1,3 +1,14 @@
 /* =============
     Buttons
 ============= */
+button {
+    background: $tan;
+    border-bottom: 4px solid $agua;
+    border-radius: 32px;
+    font-family: 'DM Serif Text', serif;
+    font-size: rem-calc(20);
+    color: $black;
+    letter-spacing: rem-calc(1);
+    line-height: rem-calc(40);
+    padding: 4px 16px;
+}

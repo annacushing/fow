@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1293px" height="760px" viewBox="0 0 1293 760" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Group 24</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="134.878366%" x2="50%" y2="-34.1797918%" id="linearGradient-1">
+            <stop stop-color="#F5DA4C" offset="0%"></stop>
+            <stop stop-color="#FEF7E1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-24" transform="translate(2.000000, 0.000000)">
+            <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="1289" height="760"></rect>
+            <path d="M1289,458.622611 C1188.37736,451.455176 1060.94726,441.388148 975.71158,452.889848 C891.11831,464.304861 696.805953,603.484205 571.989216,568.321756 C492.988616,546.066291 444.738966,360.650152 390.93577,298.950574 C342.497744,243.403581 284.637637,180.224866 217.203408,142.060388 C151.72122,105.000669 73.2643289,94.3488608 0,79" id="Path" stroke="#94C83D" stroke-width="4" stroke-linecap="round" stroke-dasharray="2,16"></path>
+        </g>
+    </g>
+</svg>

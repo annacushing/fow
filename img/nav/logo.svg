@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="97px" height="44px" viewBox="0 0 97 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Group 23</title>
+    <desc>Created with Sketch.</desc>
+    <g id="templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-23">
+            <path d="M51,44 C58.7319865,44 65,37.7903841 65,30.1304348 C65,25.0238019 60.3333333,14.9803236 51,0 C41.6666667,14.9803236 37,25.0238019 37,30.1304348 C37,37.7903841 43.2680135,44 51,44 Z" id="Oval" fill="#4BC1B4"></path>
+            <g id="Group-7" fill="#94C83D">
+                <path d="M12.9552239,42.5019677 L12.9552239,0 C4.31840796,14.7891466 0,26.4339619 0,34.934446 C0,43.43493 4.31840796,45.9574372 12.9552239,42.5019677 Z" id="Oval-Copy"></path>
+                <path d="M28,42.5019677 L28,0 C19.3631841,14.7891466 15.0447761,26.4339619 15.0447761,34.934446 C15.0447761,43.43493 19.3631841,45.9574372 28,42.5019677 Z" id="Oval-Copy" transform="translate(21.522388, 22.000000) scale(-1, 1) translate(-21.522388, -22.000000) "></path>
+            </g>
+            <circle id="Oval" fill="#F5A623" cx="86" cy="33" r="11"></circle>
+        </g>
+    </g>
+</svg>

@@ -338,7 +338,7 @@ h1 {
   line-height: 2.5rem; }
   h1 span, h2 span, h3 span,
   h1 span {
-    color: #F8EFD3;
+    color: #D5F8FF;
     font-family: 'DM Serif Text', serif;
     font-size: 3.5rem;
     letter-spacing: 1px;
@@ -371,15 +371,15 @@ h3 {
     Buttons
 ============= */
 button {
-  background: #F8EFD3;
+  background: #D5F8FF;
+  border: none;
   border-bottom: 4px solid #4BC1B4;
-  border-radius: 32px;
-  font-family: 'DM Serif Text', serif;
-  font-size: 1.25rem;
   color: #000;
-  letter-spacing: 0.0625rem;
-  line-height: 2.5rem;
-  padding: 4px 16px; }
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.09375rem;
+  line-height: 1.5rem;
+  padding: 8px 16px 4px; }
 
 /* =============
     Forms
@@ -420,7 +420,7 @@ textarea {
     Header
 ============= */
 header {
-  background-color: #F8EFD3;
+  background-color: #D5F8FF;
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -437,7 +437,7 @@ footer {
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: linear-gradient(180deg, #F8EFD3 0%, #F5DA4C 140%); }
+  background-color: linear-gradient(180deg, #D5F8FF 0%, #F5DA4C 140%); }
   footer h1 {
     color: #000;
     font-family: 'DM Serif Text', serif;
@@ -481,7 +481,7 @@ footer {
       background-color: #000;
       border: none;
       border-bottom: 8px solid #4BC1B4;
-      color: #F8EFD3;
+      color: #D5F8FF;
       display: block;
       font-family: 'Poppins', sans-serif;
       font-weight: 400;
@@ -497,7 +497,7 @@ footer {
   padding: 0px 0px 80px 0px;
   background-color: #4A4A4A; }
   #events h2 {
-    color: #F8EFD3;
+    color: #D5F8FF;
     padding-top: 80px;
     padding-left: 24px; }
     #events h2 span {
@@ -527,9 +527,9 @@ footer {
     color: #000;
     text-align: right; }
     #faq h2 span {
-      color: #F8EFD3; }
+      color: #D5F8FF; }
   #faq > div:nth-child(1) {
-    background: linear-gradient(45deg, #4BC1B4 0%, #94C83D 110%);
+    background: linear-gradient(45deg, #4BC1B4 0%, #94C83D 60%);
     padding: 24px;
     width: 50%;
     grid-area: faq; }
@@ -597,7 +597,8 @@ footer {
     Friends
 ============= */
 #friends {
-  padding: 40px 24px 80px 24px; }
+  padding: 40px 24px 80px 24px;
+  background: #EEFCFF; }
   #friends h2 {
     color: #000;
     padding-bottom: 24px; }
@@ -611,9 +612,9 @@ footer {
       background-color: #F5DA4C;
       padding: 8px 24px; }
     #friends .friend-card p {
-      background: #F8EFD3;
+      background: #fff;
       padding: 16px 24px;
-      box-shadow: 0 7px 16px 2px rgba(206, 206, 206, 0.3); }
+      box-shadow: 0 7px 16px 2px rgba(206, 206, 206, 0.4); }
     #friends .friend-card span {
       font-family: 'Poppins', sans-serif;
       font-size: 1.125rem; }
@@ -634,7 +635,7 @@ footer {
   height: 16px; }
 
 #gallery > div:nth-child(4) {
-  background-color: #F8EFD3;
+  background-color: #D5F8FF;
   height: 48px; }
 
 #gallery > div:nth-child(5) {
@@ -672,7 +673,7 @@ footer {
   #plan h2 {
     padding-left: 24px;
     padding-bottom: 40px;
-    color: #F8EFD3; }
+    color: #D5F8FF; }
     #plan h2 span {
       color: #4BC1B4; }
   #plan h3 {
@@ -751,7 +752,7 @@ footer {
     background-color: #F5DA4C;
     height: 48px; }
   #trail > div:nth-child(3) {
-    background-color: #F8EFD3;
+    background-color: #D5F8FF;
     height: 16px; }
   #trail > div:nth-child(4) {
     background-color: #F5A623;
@@ -772,9 +773,9 @@ footer {
     #trail > div:nth-child(6) span {
       background-color: #F5A623; }
   #trail > div:nth-child(7) {
-    border-left: 8px solid #F8EFD3; }
+    border-left: 8px solid #D5F8FF; }
     #trail > div:nth-child(7) span {
-      background-color: #F8EFD3; }
+      background-color: #D5F8FF; }
   #trail > div:nth-child(8) {
     border-left: 8px solid #4BC1B4; }
     #trail > div:nth-child(8) span {

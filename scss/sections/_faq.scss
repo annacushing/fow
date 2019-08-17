@@ -8,11 +8,11 @@
         color: $black;
         text-align: right;
         span{
-            color: $tan;
+            color: $light;
         }
     }
     > div:nth-child(1) {
-        background: linear-gradient(45deg, $agua 0%, $tree 110%);
+        @include green-gradient;
         padding: 24px;
         width: 50%;
         grid-area: faq;

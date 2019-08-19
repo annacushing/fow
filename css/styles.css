@@ -331,14 +331,12 @@ a:link, a:visited, :hover {
 /* =============
     Typography
 ============= */
-h1, h2, h3,
 h1 {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 2rem;
   line-height: 2.5rem; }
-  h1 span, h2 span, h3 span,
   h1 span {
-    color: #D5F8FF;
+    color: #FFF5D5;
     font-family: 'DM Serif Text', serif;
     font-size: 3.5rem;
     letter-spacing: 1px;
@@ -473,14 +471,14 @@ footer {
   margin: 0 auto; }
   #contact > div h1 {
     padding: 24px;
-    color: #4BC1B4; }
+    color: #D5F8FF; }
   #contact > div div {
     width: 80%;
     padding: 0 24px; }
     #contact > div div input {
       background-color: #000;
       border: none;
-      border-bottom: 8px solid #4BC1B4;
+      border-bottom: 4px solid #4BC1B4;
       color: #D5F8FF;
       display: block;
       font-family: 'Poppins', sans-serif;
@@ -598,7 +596,7 @@ footer {
 ============= */
 #friends {
   padding: 40px 24px 80px 24px;
-  background: #EEFCFF; }
+  background: #FFF5D5; }
   #friends h2 {
     color: #000;
     padding-bottom: 24px; }
@@ -627,16 +625,16 @@ footer {
     Visit
 ============= */
 #gallery > div:nth-child(2) {
-  background-color: #4BC1B4;
-  height: 32px; }
+  background-color: #FFF5D5;
+  height: 48px; }
 
 #gallery > div:nth-child(3) {
   background-color: #F5DA4C;
   height: 16px; }
 
 #gallery > div:nth-child(4) {
-  background-color: #D5F8FF;
-  height: 48px; }
+  background-color: #4BC1B4;
+  height: 32px; }
 
 #gallery > div:nth-child(5) {
   background-color: #F5A623;
@@ -673,7 +671,7 @@ footer {
   #plan h2 {
     padding-left: 24px;
     padding-bottom: 40px;
-    color: #D5F8FF; }
+    color: #FFF5D5; }
     #plan h2 span {
       color: #4BC1B4; }
   #plan h3 {
@@ -691,7 +689,7 @@ footer {
       padding-bottom: 80px;
       padding-left: 16px; }
       #plan div:nth-child(2) aside > div:nth-child(2) h3 {
-        color: #4BC1B4;
+        color: #F5DA4C;
         border-bottom: 24px solid #000;
         line-height: 2px; }
       #plan div:nth-child(2) aside > div:nth-child(2) p {
@@ -752,7 +750,7 @@ footer {
     background-color: #F5DA4C;
     height: 48px; }
   #trail > div:nth-child(3) {
-    background-color: #D5F8FF;
+    background-color: #FFF5D5;
     height: 16px; }
   #trail > div:nth-child(4) {
     background-color: #F5A623;
@@ -773,9 +771,9 @@ footer {
     #trail > div:nth-child(6) span {
       background-color: #F5A623; }
   #trail > div:nth-child(7) {
-    border-left: 8px solid #D5F8FF; }
+    border-left: 8px solid #FFF5D5; }
     #trail > div:nth-child(7) span {
-      background-color: #D5F8FF; }
+      background-color: #FFF5D5; }
   #trail > div:nth-child(8) {
     border-left: 8px solid #4BC1B4; }
     #trail > div:nth-child(8) span {

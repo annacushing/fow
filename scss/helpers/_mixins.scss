@@ -142,6 +142,6 @@ html {
     background: linear-gradient(45deg, $agua 0%, $tree 60%)
 }
 
-@include shadow-style{
-    box-shadow: 0 7px 16px 2px rgba(206,206,206,0.40);
-}
+// @include shadow-style{
+//     box-shadow: 0 7px 16px 2px rgba(206,206,206,0.40);
+// }

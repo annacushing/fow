@@ -12,7 +12,7 @@
         }
     }
 
-
+    // top colored bars
     >div:nth-child(1){
         background-color: $agua;
         height: 32px;
@@ -22,7 +22,7 @@
         height: 48px;
     }
     >div:nth-child(3){
-        background-color: $light;
+        background-color: $off-white;
         height: 16px;
     }
     >div:nth-child(4){
@@ -58,9 +58,9 @@
     }
 
     >div:nth-child(7){
-        border-left: 8px solid $light;
+        border-left: 8px solid $off-white;
         span{
-            background-color: $light;
+            background-color: $off-white;
         }
     }
 

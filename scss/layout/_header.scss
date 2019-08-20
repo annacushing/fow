@@ -3,11 +3,15 @@
 ============= */
 
 header{
-    background-color: $light;
+    // background-color: $light;
+    // height: 56px;
     width: 100%;
     position: fixed;
     z-index: 100;
     display: flex;
     justify-content: flex-end;
+    >div{
+        padding: 16px;
+    }
 
 }

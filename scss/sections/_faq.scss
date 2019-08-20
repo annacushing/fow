@@ -3,6 +3,35 @@
 ============= */
 #faq {
     padding: 40px 0px 0px 0px;
+    display: grid;
+    grid-template-areas:
+    "faq"
+    "questions";
+    grid-template-rows: repeat(2, auto);
+
+
+    @include md{
+        grid-template-areas:
+        ". . faq faq"
+        ". questions . ."
+        "faqimg faqimg faqimg faqimg";
+        grid-template-columns: 10% 50% 30% 10%;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include lg{
+        grid-template-areas:
+        "faq . ."
+        "faq questions ."
+        "faq questions ."
+        "faqimg faqimg faqimg";
+        grid-template-columns: 20% 70% 10%;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    @include lg{
+        grid-template-columns: 40% 50% 10%;
+    }
 
     h2{
         color: $black;
@@ -13,9 +42,16 @@
     }
     > div:nth-child(1) {
         @include green-gradient;
-        padding: 24px;
-        width: 50%;
         grid-area: faq;
+
+        @include sm{
+            padding: 80px 24px 40px;
+        }
+
+        @include lg{
+            margin: 160px 16px 160px 0px;
+            padding: 80px 24px 24px;
+        }
     }
 
     > div:nth-child(2) {
@@ -32,8 +68,10 @@
             }
         }
 
-        span {
+        a {
             color: $agua;
+            text-decoration: underline;
+            text-decoration-color: $agua;
 
             &:hover {
                 background-color: $orange;
@@ -87,6 +125,7 @@
 
 
     aside{
+        grid-area: faqimg;
         height: 160px;
         background-image: url('../img/hills/green-hill.png');
         background-size: cover;
@@ -96,11 +135,11 @@
         display: flex;
         @include sm{
             height: 240px;
-            background-position: -220px center;
+            background-position: center center;
         }
         @include md{
             height: 320px;
-            background-position: center;
+            background-position: center center;
         }
     }
 }

@@ -2,20 +2,69 @@
     Hero
 ============= */
 #hero{
-    div:nth-child(1){
-        height: 457px;
+    grid-template-areas:
+    "heroimg"
+    "herotext";
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+
+    @include md{
+        grid-template-areas:
+        "herotext heroimg";
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    @include lg{
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    @include xl{
+        grid-template-columns: 480px auto;
+    }
+
+
+    >div:nth-child(1){
+        grid-area: heroimg;
         background-image: url('../img/hero/hero.jpg');
         background-size: cover;
         width: 100%;
         background-repeat: no-repeat;
         background-position: center center;
         display: flex;
+
+        @include sm{
+            height: 280px;
+        }
+        @include md{
+            height: 520px;
+        }
+        @include lg{
+            height: 740px;
+        }
+        @include xl{
+            height: 800px;
+        }
     }
 
-    div:nth-child(2){
-        padding: 40px 0px;
-        display: inline-block;
-        align-self: center;
-        background: linear-gradient(180deg, $tree 40%, $agua 120%);
+
+    >div:nth-child(2){
+        grid-area: herotext;
+        padding: 40px 24px;
+        @include green-gradient;
+
+        @include sm{
+            height: 200px;
+        }
+        @include md{
+            height: 480px;
+        }
+        @include lg{
+            height: 640px;
+        }
+        @include xl{
+            height: 720px;
+        }
     }
 }

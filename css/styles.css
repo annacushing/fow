@@ -336,7 +336,7 @@ h1 {
   font-size: 2rem;
   line-height: 2.5rem; }
   h1 span {
-    color: #FFF5D5;
+    color: #FCF4DA;
     font-family: 'DM Serif Text', serif;
     font-size: 3.5rem;
     letter-spacing: 1px;
@@ -366,11 +366,73 @@ h3 {
   line-height: 1.75rem; }
 
 /* =============
+    Off Canvas
+============= */
+main {
+  position: relative;
+  z-index: 10;
+  background-color: #fff; }
+
+#off-canvas-container {
+  background-color: #000;
+  display: grid;
+  grid-template-areas: ". off-canvas .";
+  grid-template-columns: 10px auto 10px;
+  padding-top: 20px;
+  width: 200px;
+  /* If you need padding or margin on the off-canvas menu, please add it to this div */ }
+  #off-canvas-container > div {
+    grid-area: off-canvas; }
+
+#off-canvas-container[data-navigation-slide="over"], #off-canvas-container[data-navigation-slide="push"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 1000; }
+
+#off-canvas-container[data-navigation-slide="under"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 5; }
+
+/* left */
+#off-canvas-container[data-navigation-position='left'] {
+  left: 0;
+  top: 0; }
+
+/* right */
+#off-canvas-container[data-navigation-position='right'] {
+  right: 0;
+  top: 0; }
+
+/* ===================
+    Navigation Helpers
+ =================== */
+/* overlay */
+.js-off-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100vw;
+  height: 100%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* change the color of the overlay */
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden; }
+
+.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+/* =============
     Buttons
 ============= */
 button {
   background: #D5F8FF;
   border: none;
+  outline: none;
   border-bottom: 4px solid #4BC1B4;
   color: #000;
   font-family: 'Poppins', sans-serif;
@@ -378,6 +440,10 @@ button {
   letter-spacing: 0.09375rem;
   line-height: 1.5rem;
   padding: 8px 16px 4px; }
+  button :hover {
+    background: #F5A623;
+    border-bottom: 4px solid #F5DA4C;
+    color: #fff; }
 
 /* =============
     Forms
@@ -397,18 +463,73 @@ textarea {
 /* =============
     Navigation
 ============= */
+/* =============
+    Navigation
+============= */
+a:hover,
+a:link {
+  text-decoration: none;
+  transition: 0.25s; }
+
+#off-canvas-container {
+  /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
+  background-color: #4A4A4A;
+  /* close btn */
+  /* close btn */ }
+  #off-canvas-container button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5625rem;
+    margin-bottom: 20px;
+    text-align: right;
+    transition: 0.25s;
+    width: 100%; }
+  #off-canvas-container button:hover {
+    color: #F5A623; }
+  #off-canvas-container ul li {
+    border: none;
+    outline: none;
+    border-bottom: 4px solid #4BC1B4;
+    color: #D5F8FF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.09375rem;
+    line-height: 1.5rem;
+    margin-bottom: 20px; }
+    #off-canvas-container ul li :hover {
+      color: #F5A623; }
+    #off-canvas-container ul li a:link,
+    #off-canvas-container ul li a:visited {
+      color: #fff; }
+    #off-canvas-container ul li a:active,
+    #off-canvas-container ul li a:hover {
+      color: #F5A623; }
+
 #burger-icon {
-  background-color: #000;
-  border-radius: 8px;
+  background: #D5F8FF;
   border: none;
-  font-size: 1.4375rem;
-  color: #F5A623;
   outline: none;
+  border-bottom: 4px solid #4BC1B4;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.09375rem;
+  line-height: 1.5rem;
+  padding: 8px 16px 4px;
+  font-size: 1.4375rem;
   padding: 10px 12px 8px 12px;
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 16px;
+  top: 16px;
   z-index: 100; }
+  #burger-icon :hover {
+    background: #F5A623;
+    border-bottom: 4px solid #F5DA4C;
+    color: #fff; }
 
 #burger-icon:hover {
   background-color: #000;
@@ -418,47 +539,57 @@ textarea {
     Header
 ============= */
 header {
-  background-color: #D5F8FF;
   width: 100%;
   position: fixed;
   z-index: 100;
   display: flex;
   justify-content: flex-end; }
+  header > div {
+    padding: 16px; }
 
 /* =============
     Footer
 ============= */
 footer {
   padding: 40px 0px 80px 0px;
-  background-image: url("../img/hills/footer.svg");
   background-size: cover;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: linear-gradient(180deg, #D5F8FF 0%, #F5DA4C 140%); }
-  footer h1 {
-    color: #000;
-    font-family: 'DM Serif Text', serif;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    line-height: 2.5rem;
-    text-align: center;
-    padding: 0 32px; }
-  footer ul {
-    display: flex;
-    justify-content: center; }
-    footer ul li {
-      padding: 16px 16px; }
-      footer ul li a:link,
-      footer ul li a:visited {
-        color: #000;
-        font-size: 2.5rem; }
-      footer ul li a:active,
-      footer ul li a:hover {
-        color: #F5A623; }
+  background: #FCF4DA;
+  display: grid;
+  grid-template-areas: ". footer .";
+  grid-template-columns: 10% 80% 10%; }
+  @media (min-width: 789px) {
+    footer {
+      grid-template-columns: 30% 40% 30%; } }
   footer div {
-    display: flex;
-    justify-content: center; }
+    grid-area: footer; }
+    footer div h1 {
+      color: #000;
+      text-decoration: underline;
+      text-decoration-color: #4BC1B4;
+      font-family: 'DM Serif Text', serif;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      line-height: 2.5rem;
+      text-align: center;
+      padding: 0px 0px 16px; }
+    footer div ul {
+      display: flex;
+      justify-content: center; }
+      footer div ul li {
+        padding: 16px 16px; }
+        footer div ul li a:link,
+        footer div ul li a:visited {
+          color: #000;
+          font-size: 2.5rem; }
+        footer div ul li a:active,
+        footer div ul li a:hover {
+          color: #F5A623; }
+    footer div div {
+      display: flex;
+      justify-content: center; }
 
 /* =============
     Contact
@@ -466,34 +597,63 @@ footer {
 #contact {
   background: #4A4A4A;
   display: grid;
-  display: block;
-  padding: 40px 0px 80px 0px;
-  margin: 0 auto; }
-  #contact > div h1 {
-    padding: 24px;
-    color: #D5F8FF; }
-  #contact > div div {
-    width: 80%;
-    padding: 0 24px; }
-    #contact > div div input {
-      background-color: #000;
-      border: none;
-      border-bottom: 4px solid #4BC1B4;
-      color: #D5F8FF;
-      display: block;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      margin: 16px 0;
-      outline: none;
-      padding: 16px 8px;
-      width: 100%; }
+  padding: 0px 0px 80px 0px;
+  display: grid;
+  grid-template-areas: ". form .";
+  grid-template-columns: 20% 60% 20%; }
+  @media (min-width: 789px) {
+    #contact {
+      grid-template-columns: 30% 40% 30%; } }
+  @media (min-width: 968px) {
+    #contact {
+      grid-template-columns: 35% 30% 35%; } }
+  #contact > div {
+    grid-area: form; }
+    #contact > div h1 {
+      padding: 48px 0px 16px;
+      color: #D5F8FF; }
+    #contact > div form {
+      padding: 0px; }
+      #contact > div form input {
+        background-color: #000;
+        border: none;
+        border-bottom: 4px solid #4BC1B4;
+        color: #D5F8FF;
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        margin: 16px 0;
+        outline: none;
+        padding: 16px 8px;
+        width: 100%; }
 
 /* =============
     Events
 ============= */
 #events {
   padding: 0px 0px 80px 0px;
-  background-color: #4A4A4A; }
+  background-color: #4A4A4A;
+  display: grid;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px; }
+  @media (min-width: 498px) {
+    #events {
+      grid-template-areas: "events" "events1" "events2" "events3";
+      grid-template-rows: repeat(4, auto); } }
+  @media (min-width: 789px) {
+    #events {
+      grid-template-areas: "events events1" "events2 events3";
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: 50% 50%; } }
+  @media (min-width: 968px) {
+    #events {
+      grid-template-areas: "events events events" "events1 events2 events3";
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+      padding: 0 80px; } }
+  @media (min-width: 968px) {
+    #events {
+      padding: 0 200px; } }
   #events h2 {
     color: #D5F8FF;
     padding-top: 80px;
@@ -503,15 +663,21 @@ footer {
   #events > div button {
     position: relative;
     top: 24px; }
+  #events > div:nth-child(1) {
+    grid-area: 'events'; }
   #events > div:nth-child(2) {
+    grid-area: 'events1';
     background-color: #94C83D;
     padding: 24px 24px 0px;
-    margin: 24px 24px 56px; }
+    margin: 24px 24px 56px;
+    box-shadow: 0 3px 90px 0 rgba(0, 0, 0, 0.4); }
   #events > div:nth-child(3) {
+    grid-area: 'events2';
     background-color: #F5DA4C;
     padding: 24px 24px 0px;
     margin: 24px 24px 56px; }
   #events > div:nth-child(4) {
+    grid-area: 'events3';
     background-color: #F5A623;
     padding: 24px 24px 0px;
     margin: 24px 24px 56px; }
@@ -520,17 +686,38 @@ footer {
     FAQ
 ============= */
 #faq {
-  padding: 40px 0px 0px 0px; }
+  padding: 40px 0px 0px 0px;
+  display: grid;
+  grid-template-areas: "faq" "questions";
+  grid-template-rows: repeat(2, auto); }
+  @media (min-width: 789px) {
+    #faq {
+      grid-template-areas: ". . faq faq" ". questions . ." "faqimg faqimg faqimg faqimg";
+      grid-template-columns: 10% 50% 30% 10%;
+      grid-template-rows: repeat(3, auto); } }
+  @media (min-width: 968px) {
+    #faq {
+      grid-template-areas: "faq . ." "faq questions ." "faq questions ." "faqimg faqimg faqimg";
+      grid-template-columns: 20% 70% 10%;
+      grid-template-rows: repeat(4, auto); } }
+  @media (min-width: 968px) {
+    #faq {
+      grid-template-columns: 40% 50% 10%; } }
   #faq h2 {
     color: #000;
     text-align: right; }
     #faq h2 span {
       color: #D5F8FF; }
   #faq > div:nth-child(1) {
-    background: linear-gradient(45deg, #4BC1B4 0%, #94C83D 60%);
-    padding: 24px;
-    width: 50%;
+    background: linear-gradient(180deg, #4BC1B4 0%, #94C83D 120%);
     grid-area: faq; }
+    @media (min-width: 498px) {
+      #faq > div:nth-child(1) {
+        padding: 80px 24px 40px; } }
+    @media (min-width: 968px) {
+      #faq > div:nth-child(1) {
+        margin: 160px 16px 160px 0px;
+        padding: 80px 24px 24px; } }
   #faq > div:nth-child(2) {
     grid-area: questions;
     padding: 16px; }
@@ -538,9 +725,11 @@ footer {
       padding: 24px 8px 32px; }
     #faq > div:nth-child(2) ul h3 {
       padding-bottom: 8px; }
-    #faq > div:nth-child(2) span {
-      color: #4BC1B4; }
-      #faq > div:nth-child(2) span:hover {
+    #faq > div:nth-child(2) a {
+      color: #4BC1B4;
+      text-decoration: underline;
+      text-decoration-color: #4BC1B4; }
+      #faq > div:nth-child(2) a:hover {
         background-color: #F5A623;
         color: #fff; }
     #faq > div:nth-child(2) div {
@@ -575,6 +764,7 @@ footer {
     height: 457px;
     width: 100%; }
   #faq aside {
+    grid-area: faqimg;
     height: 160px;
     background-image: url("../img/hills/green-hill.png");
     background-size: cover;
@@ -582,21 +772,20 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     display: flex; }
-    @media (min-width: 576px) {
+    @media (min-width: 498px) {
       #faq aside {
         height: 240px;
-        background-position: -220px center; } }
-    @media (min-width: 768px) {
+        background-position: center center; } }
+    @media (min-width: 789px) {
       #faq aside {
         height: 320px;
-        background-position: center; } }
+        background-position: center center; } }
 
 /* =============
     Friends
 ============= */
 #friends {
-  padding: 40px 24px 80px 24px;
-  background: #FFF5D5; }
+  padding: 80px 24px; }
   #friends h2 {
     color: #000;
     padding-bottom: 24px; }
@@ -607,8 +796,8 @@ footer {
   #friends .friend-card {
     margin: 24px 0; }
     #friends .friend-card h3 {
-      background-color: #F5DA4C;
-      padding: 8px 24px; }
+      padding: 8px 24px;
+      letter-spacing: 1px; }
     #friends .friend-card p {
       background: #fff;
       padding: 16px 24px;
@@ -616,16 +805,43 @@ footer {
     #friends .friend-card span {
       font-family: 'Poppins', sans-serif;
       font-size: 1.125rem; }
-  #friends ul li:nth-child(1), #friends ul li:nth-child(2), #friends ul li:nth-child(3) {
-    border-bottom: 8px solid #4BC1B4; }
-  #friends ul li:nth-child(4), #friends ul li:nth-child(5), #friends ul li:nth-child(6) {
-    border-bottom: 8px solid #F5A623; }
+  @media (min-width: 789px) {
+    #friends div:nth-child(1) {
+      width: 40%;
+      margin-left: 24px; } }
+  #friends div:nth-child(2) {
+    display: grid; }
+    @media (min-width: 498px) {
+      #friends div:nth-child(2) {
+        grid-template-areas: "card1" "card2";
+        grid-template-rows: repeat(2, auto); } }
+    @media (min-width: 789px) {
+      #friends div:nth-child(2) {
+        grid-template-areas: ". card2" "card1 card2" "card1 card2" "card1 card2" "card1 card2" "card1 .";
+        grid-template-rows: repeat(6, auto);
+        grid-gap: 40px; } }
+    @media (min-width: 968px) {
+      #friends div:nth-child(2) {
+        grid-template-areas: "card1 card1 card1" "card2 card2 card2";
+        display: flex;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 40px; } }
+    #friends div:nth-child(2) ul:nth-child(1) {
+      grid-area: card1; }
+      #friends div:nth-child(2) ul:nth-child(1) li {
+        background-color: #D5F8FF;
+        border-bottom: 8px solid #4BC1B4; }
+    #friends div:nth-child(2) ul:nth-child(2) {
+      grid-area: card2; }
+      #friends div:nth-child(2) ul:nth-child(2) li {
+        background-color: #F5DA4C;
+        border-bottom: 8px solid #F5A623; }
 
 /* =============
     Visit
 ============= */
 #gallery > div:nth-child(2) {
-  background-color: #FFF5D5;
+  background-color: #FCF4DA;
   height: 48px; }
 
 #gallery > div:nth-child(3) {
@@ -643,35 +859,70 @@ footer {
 /* =============
     Hero
 ============= */
-#hero div:nth-child(1) {
-  height: 457px;
-  background-image: url("../img/hero/hero.jpg");
-  background-size: cover;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex; }
-
-#hero div:nth-child(2) {
-  padding: 40px 0px;
-  display: inline-block;
-  align-self: center;
-  background: linear-gradient(180deg, #94C83D 40%, #4BC1B4 120%); }
+#hero {
+  grid-template-areas: "heroimg" "herotext";
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto); }
+  @media (min-width: 789px) {
+    #hero {
+      grid-template-areas: "herotext heroimg";
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(1, auto); } }
+  @media (min-width: 968px) {
+    #hero {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(1, auto); } }
+  @media (min-width: 1210px) {
+    #hero {
+      grid-template-columns: 480px auto; } }
+  #hero > div:nth-child(1) {
+    grid-area: heroimg;
+    background-image: url("../img/hero/hero.jpg");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex; }
+    @media (min-width: 498px) {
+      #hero > div:nth-child(1) {
+        height: 280px; } }
+    @media (min-width: 789px) {
+      #hero > div:nth-child(1) {
+        height: 520px; } }
+    @media (min-width: 968px) {
+      #hero > div:nth-child(1) {
+        height: 740px; } }
+    @media (min-width: 1210px) {
+      #hero > div:nth-child(1) {
+        height: 800px; } }
+  #hero > div:nth-child(2) {
+    grid-area: herotext;
+    padding: 40px 24px;
+    background: linear-gradient(180deg, #4BC1B4 0%, #94C83D 120%); }
+    @media (min-width: 498px) {
+      #hero > div:nth-child(2) {
+        height: 200px; } }
+    @media (min-width: 789px) {
+      #hero > div:nth-child(2) {
+        height: 480px; } }
+    @media (min-width: 968px) {
+      #hero > div:nth-child(2) {
+        height: 640px; } }
+    @media (min-width: 1210px) {
+      #hero > div:nth-child(2) {
+        height: 720px; } }
 
 /* =============
     Plan
 ============= */
 #plan {
-  display: grid;
-  grid-template-areas: "plan" "activities";
-  grid-template-rows: repeat(2, auto);
   margin: 0 auto;
   background: #4A4A4A;
   padding: 40px 0px 80px 0px; }
   #plan h2 {
     padding-left: 24px;
     padding-bottom: 40px;
-    color: #FFF5D5; }
+    color: #FCF4DA; }
     #plan h2 span {
       color: #4BC1B4; }
   #plan h3 {
@@ -680,24 +931,42 @@ footer {
     font-size: 2rem;
     line-height: 2rem;
     padding-left: 24px; }
-  #plan div:nth-child(1) {
-    grid-area: plan; }
   #plan div:nth-child(2) {
-    grid-area: activities; }
+    display: grid;
+    grid-template-areas: "hike" "bike" "run";
+    grid-template-rows: repeat(3, auto); }
+    @media (min-width: 789px) {
+      #plan div:nth-child(2) {
+        grid-template-areas: "hike ." "hike run" "bike run" "bike .";
+        grid-gap: 24px; } }
+    @media (min-width: 968px) {
+      #plan div:nth-child(2) {
+        grid-template-areas: ". bike" "hike bike" "hike run" ". run";
+        grid-gap: 64px; } }
+    @media (min-width: 1210px) {
+      #plan div:nth-child(2) {
+        grid-template-areas: "hike run bike";
+        grid-gap: 56px; } }
     #plan div:nth-child(2) aside {
       margin-top: 40px;
-      padding-bottom: 80px;
-      padding-left: 16px; }
+      padding-bottom: 80px; }
+      @media (min-width: 498px) {
+        #plan div:nth-child(2) aside {
+          padding-left: 16px; } }
+      @media (min-width: 789px) {
+        #plan div:nth-child(2) aside {
+          padding: 0px; } }
       #plan div:nth-child(2) aside > div:nth-child(2) h3 {
-        color: #F5DA4C;
-        border-bottom: 24px solid #000;
-        line-height: 2px; }
+        color: #D5F8FF; }
       #plan div:nth-child(2) aside > div:nth-child(2) p {
         color: #fff;
-        border-left: 8px solid #94C83D;
+        border-left: 8px solid #4BC1B4;
         margin-top: 24px;
         padding-left: 16px;
         padding-right: 24px; }
+        @media (min-width: 968px) {
+          #plan div:nth-child(2) aside > div:nth-child(2) p {
+            padding-right: 0px; } }
       #plan div:nth-child(2) aside > div:nth-child(2) span {
         background-color: #F5DA4C; }
     #plan div:nth-child(2) aside:nth-child(1) {
@@ -733,12 +1002,32 @@ footer {
         height: 280px;
         width: 100%;
         margin-bottom: 40px; }
+        @media (min-width: 1210px) {
+          #plan div:nth-child(2) aside:nth-child(3) div:nth-child(1) {
+            background-position: center 80px; } }
 
 /* =============
     Trail
 ============= */
 #trail {
-  background-color: #fff; }
+  background-color: #fff;
+  grid-template-areas: "trailtop" "forbiddentrail" "whitetrail" "orangetrail" "yellowtrail";
+  grid-template-rows: repeat(5, auto); }
+  @media (min-width: 789px) {
+    #trail {
+      grid-template-areas: "trailtop forbiddentrail" "orangetrail orangetrail" "whitetrail yellowtrail";
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(3, auto); } }
+  @media (min-width: 968px) {
+    #trail {
+      grid-template-areas: "forbiddentrail trailtop" "whitetrail orangetrail" ". yellowtrail";
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(3, auto); } }
+  @media (min-width: 1210px) {
+    #trail {
+      grid-template-areas: "forbiddentrail whitetrail trailtop" ". orangetrail yellowtrail";
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto); } }
   #trail h2 {
     padding: 80px 24px 40px 24px; }
     #trail h2 span {
@@ -750,7 +1039,7 @@ footer {
     background-color: #F5DA4C;
     height: 48px; }
   #trail > div:nth-child(3) {
-    background-color: #FFF5D5;
+    background-color: #FCF4DA;
     height: 16px; }
   #trail > div:nth-child(4) {
     background-color: #F5A623;
@@ -767,18 +1056,24 @@ footer {
       font-family: 'Poppins', sans-serif;
       font-size: 1.125rem; }
   #trail > div:nth-child(6) {
-    border-left: 8px solid #F5A623; }
-    #trail > div:nth-child(6) span {
-      background-color: #F5A623; }
-  #trail > div:nth-child(7) {
-    border-left: 8px solid #FFF5D5; }
-    #trail > div:nth-child(7) span {
-      background-color: #FFF5D5; }
-  #trail > div:nth-child(8) {
+    grid-area: trailtop; }
+  #trail > div:nth-child(6) {
+    grid-area: frobiddentrail;
     border-left: 8px solid #4BC1B4; }
-    #trail > div:nth-child(8) span {
+    #trail > div:nth-child(6) span {
       background-color: #4BC1B4; }
+  #trail > div:nth-child(7) {
+    grid-area: whitetrail;
+    border-left: 8px solid #FCF4DA; }
+    #trail > div:nth-child(7) span {
+      background-color: #FCF4DA; }
+  #trail > div:nth-child(8) {
+    grid-area: orangetrail;
+    border-left: 8px solid #F5A623; }
+    #trail > div:nth-child(8) span {
+      background-color: #F5A623; }
   #trail > div:nth-child(9) {
+    grid-area: yellowtrail;
     border-left: 8px solid #F5DA4C; }
     #trail > div:nth-child(9) span {
       background-color: #F5DA4C; }
@@ -790,11 +1085,11 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     display: flex; }
-    @media (min-width: 576px) {
+    @media (min-width: 498px) {
       #trail aside {
         height: 240px;
         background-position: -220px center; } }
-    @media (min-width: 768px) {
+    @media (min-width: 789px) {
       #trail aside {
         height: 320px;
         background-position: center; } }
@@ -803,11 +1098,33 @@ footer {
     Visit
 ============= */
 #visit {
-  margin: 0 auto;
   display: grid;
-  grid-template-areas: "visit" "visitors";
-  grid-template-rows: repeat(2, auto);
-  padding: 40px 24px 80px 24px; }
+  grid-template-areas: "vtop" "vtext" "vbtn" "vimg";
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(1, auto);
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+  grid-gap: 24px; }
+  @media (min-width: 789px) {
+    #visit {
+      align-items: center;
+      grid-template-areas: ". vtop vtop ." ". vtext vtext ." ". vbtn vimg .";
+      grid-template-columns: 10% 60% 20% 10%;
+      grid-template-rows: repeat(3, auto);
+      grid-gap: 56px; } }
+  @media (min-width: 968px) {
+    #visit {
+      align-items: center;
+      grid-template-areas: ". vtop . ." ". vtop vtext ." ". vtop vbtn ." ". vimg vbtn .";
+      grid-template-columns: 10% 50% 30% 10%;
+      grid-template-rows: repeat(3, auto); } }
+  @media (min-width: 1210px) {
+    #visit {
+      align-items: center;
+      grid-template-areas: ". vtop . ." ". vtop vtext ." ". vtop vbtn ." ". vimg . .";
+      grid-template-columns: auto 480px 400px auto;
+      grid-template-rows: repeat(4, auto);
+      grid-gap: 24px; } }
   #visit h2 {
     hyphens: auto; }
     #visit h2 span {
@@ -817,12 +1134,15 @@ footer {
   #visit button {
     margin: 24px 16px 0 0; }
   #visit div:nth-child(1) {
-    grid-area: visit; }
+    grid-area: vtop; }
   #visit div:nth-child(2) {
-    grid-area: visitors; }
+    grid-area: vtext; }
+  #visit aside {
+    grid-area: vbtn; }
   #visit div:nth-child(3) {
     display: flex;
+    grid-area: vimg;
     justify-content: flex-end; }
     #visit div:nth-child(3) img {
-      padding: 40px;
-      height: 240px; }
+      height: 240px;
+      padding: 40px; }

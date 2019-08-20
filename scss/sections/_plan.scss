@@ -2,9 +2,6 @@
     Plan
 ============= */
 #plan {
-    display: grid;
-    grid-template-areas: "plan" "activities";
-    grid-template-rows: repeat(2, auto);
     margin: 0 auto;
     background: $midnight;
     padding: 40px 0px 80px 0px;
@@ -21,37 +18,69 @@
     h3{
         color: $black;
         font-family: 'DM Serif Text', serif;
-        // font-family: 'Poppins', sans-serif;
         font-size: rem-calc(32);
         line-height: rem-calc(32);
         padding-left: 24px;
     }
 
-    div:nth-child(1) {
-        grid-area: plan;
-    }
 
     div:nth-child(2) {
-        grid-area: activities;
+        display: grid;
+        grid-template-areas:
+        "hike"
+        "bike"
+        "run";
+        grid-template-rows: repeat(3, auto);
+
+        @include md{
+            grid-template-areas:
+            "hike ."
+            "hike run"
+            "bike run"
+            "bike .";
+            grid-gap: 24px;
+        }
+
+        @include lg{
+            grid-template-areas:
+            ". bike"
+            "hike bike"
+            "hike run"
+            ". run";
+            grid-gap: 64px;
+        }
+
+        @include xl{
+            grid-template-areas:
+            "hike run bike";
+            grid-gap: 56px;
+        }
 
         aside {
             margin-top: 40px;
             padding-bottom: 80px;
-            padding-left: 16px;
+            @include sm{
+                padding-left: 16px;
+            }
+
+            @include md{
+                padding: 0px;
+            }
 
             > div:nth-child(2) {
                 h3 {
-                    color: $sun;
-                    border-bottom: 24px solid $black;
-                    line-height: 2px;
+                    color: $light;
                 }
 
                 p {
                     color: $white;
-                    border-left: 8px solid $tree;
+                    border-left: 8px solid $agua;
                     margin-top: 24px;
                     padding-left: 16px;
                     padding-right: 24px;
+                    @include lg{
+                        padding-right: 0px;
+                    }
                 }
 
                 span {
@@ -99,6 +128,9 @@
                 height: 280px;
                 width: 100%;
                 margin-bottom: 40px;
+                @include xl{
+                    background-position: center 80px;
+                }
             }
         }
 

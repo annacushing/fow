@@ -16,37 +16,42 @@
 
 <body>
 
-    <main>
-        <header>
-            <section>
-                <img src="img/nav/logo.svg" alt="Logo">
-            </section>
-            <section>
-                <div>
-                    <section id="burger-container">
-                        <svg width="100" height="49" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Page-1" fill="none" fill-rule="evenodd">
-                                <g id="Mobile" fill="#000">
-                                    <path id="bottomLine" d="M0 46h100v3H0z" />
-                                    <path id="middleLine" d="M0 23h100v3H0z" />
-                                    <path id="topLine" d="M0 0h100v3H0z" />
-                                </g>
-                            </g>
-                        </svg>
-                    </section>
-                </div>
-            </section>
+    <!-- Your options for data-navigation-position is: left | right -->
+    <!-- Your options for data-navigation-slide is: over | under | push -->
+    <section id="off-canvas-container" data-navigation-position="right" data-navigation-slide="push">
+        <div>
+            <button>
+                <i class="far fa-times-circle" id="close-btn"></i>
+            </button>
+            <div id="nav-container">
+                <nav data-nav="main-navigation">
 
-            <nav data-nav="main-navigation">
-                <ul>
-                    <li><a href="#">VISIT</a></li>
-                    <li><a href="#">TRAILS</a></li>
-                    <li><a href="#">EVENTS</a></li>
-                    <li><a href="#">FRIENDS</a></li>
-                    <li><a href="#">FAQ </a></li>
-                </ul>
-            </nav>
-        </header>
+                    <ul>
+                        <li><a href="#">VISIT</a></li>
+                        <li><a href="#">TRAILS</a></li>
+                        <li><a href="#">EVENTS</a></li>
+                        <li><a href="#">FRIENDS</a></li>
+                        <li><a href="#">FAQ </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- The header needs to be outside of the main tag if you are going to position fix it. -->
+    <header data-fixed="fixed-item">
+        <div>
+            <!-- burger icon -->
+            <section id="burger-icon" >
+                <i class="fas fa-bars"></i>
+            </section>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="js-off-canvas-overlay" id="overlay"></div>
 
         <section id="hero">
             <div></div>
@@ -56,19 +61,22 @@
         </section>
 
         <section id="visit">
+            <!-- visit -->
             <div>
                 <h2>visiting the <br><span>WISSAHICKON VALLEY PARK</span></h2>
             </div>
+            <!-- visitors -->
             <div>
                 <p>Over 1.1 million annual visitors take advantage of the park’s abundant recreational opportunities. More than 50 miles of rugged trails offer hikers, mountain bikers, and equestrians the opportunity to explore the park’s dense
                     forests, open meadows, and shaded creeks.</p>
-                <aside>
-                    <button type="button" name="WHAT TO DO">WHAT TO DO</button>
-                    <button type="button" name="WHERE TO GO">WHERE TO GO</button>
-                </aside>
             </div>
+            <aside>
+                <button type="button" name="WHAT TO DO">WHAT TO DO</button>
+                <button type="button" name="WHERE TO GO">WHERE TO GO</button>
+            </aside>
 
             <div>
+                <!-- iconimg -->
                 <img src="img/visit/elements.svg" alt="Elements of the Trails">
             </div>
         </section>
@@ -209,17 +217,19 @@
                         <h3>CONTRIBUTING</h3>
                         <p><span>$100</span> <br>Membership benefits <br>Hat or tee</p>
                     </li>
+                </ul>
+                <ul>
                     <li class="friend-card">
                         <h3>FAMILY</h3>
                         <p><span>$75</span> <br>Membership benefits <br>2 Children's tee</p>
-                    </li class="friend-card">
+                    </li>
                     <li class="friend-card">
                         <h3>BASIC</h3>
                         <p><span>$45</span> <br>Invites to all events <br>Park map</p>
                     </li>
                     <li class="friend-card">
                         <h3>STUDENT</h3>
-                        <p><span>$20</span>Invites to all events <br>Member discounts</p>
+                        <p><span>$20</span> <br>Invites to all events <br>Member discounts</p>
                     </li>
                 </ul>
             </div>
@@ -241,11 +251,11 @@
                 <ul>
                     <li>
                         <h3>HOW DO I GET TO THE PARK?</h3>
-                        <p>Because Wissahickon Valley Park is so large, there is not a single street address for it. There are several entrances with free parking throughout the park, which can be seen on <span>this Google Map</span>.</p>
+                        <p>Because Wissahickon Valley Park is so large, there is not a single street address for it. There are several entrances with free parking throughout the park, which can be seen on <a>this Google Map</a>.</p>
                     </li>
                     <li>
                         <h3>HOW CAN I GET A MAP OF THE PARK?</h3>
-                        <p>FOW publishes a <span>detailed fold-out map</span> of the valley that shows trails, landmarks, entrances, parking, and other points of interest.</p>
+                        <p>FOW publishes a <a>detailed fold-out map</a> of the valley that shows trails, landmarks, entrances, parking, and other points of interest.</p>
                     </li>
                     <li>
                         <h3>HOW MANY MILES OF TRAILS ARE THERE IN THE WISSAHICKON?</h3>
@@ -263,27 +273,29 @@
         <section id="contact">
             <div>
                 <h1>TALK TO US</h1>
-                <div>
+                <form>
                     <input type="text" placeholder="Name" required>
                     <input type="text" placeholder="Email" required>
                     <input type="text" placeholder="Message" required>
                     <button type="button" name="SEND">SEND</button>
-                </div>
+                </form>
             </div>
         </section>
 
 
         <footer>
-            <h1>stay up with our news and all kinds of trail things</h1>
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
             <div>
-                <button type="button" name="SUBSCRIBE">SUBSCRIBE</button>
+                <h1>stay up with our news and all kinds of trail things</h1>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <div>
+                    <button type="button" name="SUBSCRIBE">SUBSCRIBE</button>
+                </div>
             </div>
-            <!-- <aside></aside> -->
+
         </footer>
     </main>
 

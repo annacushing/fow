@@ -2,8 +2,42 @@
     Events
 ============= */
 #events{
-    padding: 0px 0px 80px 0px;
+    @include section-padding;
     background-color: $midnight;
+    display: grid;
+    margin: 0 auto;
+    padding: 40px 24px 80px 24px;
+
+    @include sm{
+        grid-template-areas:
+        "events"
+        "events1"
+        "events2"
+        "events3";
+        grid-template-rows: repeat(4, auto);
+
+    }
+
+    @include md{
+        grid-template-areas:
+        "events events1"
+        "events2 events3";
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 50% 50%;
+    }
+
+    @include lg{
+        grid-template-areas:
+        "events events events"
+        "events1 events2 events3";
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        padding: 0 80px;
+    }
+
+    @include lg{
+        padding: 0 200px;
+    }
 
     h2{
         color: $light;
@@ -22,19 +56,27 @@
         }
     }
 
+    >div:nth-child(1){
+        grid-area: 'events';
+    }
+
     >div:nth-child(2){
+        grid-area: 'events1';
         background-color: $tree;
         padding: 24px 24px 0px;
         margin: 24px 24px 56px;
+        @include shadow-style-dark;
     }
 
     >div:nth-child(3){
+        grid-area: 'events2';
         background-color: $sun;
         padding: 24px 24px 0px;
         margin: 24px 24px 56px;
     }
 
     >div:nth-child(4){
+        grid-area: 'events3';
         background-color: $orange;
         padding: 24px 24px 0px;
         margin: 24px 24px 56px;

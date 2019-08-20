@@ -2,17 +2,73 @@
     Navigation
 ============= */
 
+/* =============
+    Navigation
+============= */
+a:hover,
+a:link {
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+
+#off-canvas-container{
+    /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
+
+    // grid-template-columns: 10px auto 10px;
+    // padding-top: 20px;
+
+    // width of the off canvas navigation
+    // width: 200px;
+
+
+    background-color: $midnight;
+
+    /* close btn */
+    button {
+        background-color: transparent;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        font-size: rem-calc(25);
+        margin-bottom: 20px;
+        text-align: right;
+        transition: 0.25s;
+        width: 100%;
+    }
+
+    /* close btn */
+    button:hover {
+        color: $orange;
+    }
+
+    ul {
+        li {
+            @include link-style;
+            margin-bottom: 20px;
+            a:link,
+            a:visited {
+                color: #fff;
+            }
+
+            a:active,
+            a:hover {
+                color: $orange;
+            }
+        }
+    }
+}
+
+
 #burger-icon {
-    background-color: $black;
-    border-radius: 8px;
-    border: none;
+    @include btn-style;
     font-size: rem-calc(23);
-    color: $orange;
-    outline: none;
     padding: 10px 12px 8px 12px;
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 16px;
+    top: 16px;
     z-index: 100;
 }
 

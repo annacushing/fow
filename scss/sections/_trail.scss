@@ -4,6 +4,39 @@
 
 #trail{
     background-color: $white;
+    grid-template-areas:
+    "trailtop"
+    "forbiddentrail"
+    "whitetrail"
+    "orangetrail"
+    "yellowtrail";
+    grid-template-rows: repeat(5, auto);
+
+    @include md{
+        grid-template-areas:
+        "trailtop forbiddentrail"
+        "orangetrail orangetrail"
+        "whitetrail yellowtrail";
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include lg{
+        grid-template-areas:
+        "forbiddentrail trailtop"
+        "whitetrail orangetrail"
+        ". yellowtrail";
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include xl{
+        grid-template-areas:
+        "forbiddentrail whitetrail trailtop"
+        ". orangetrail yellowtrail";
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+    }
 
     h2{
         padding: 80px 24px 40px 24px;
@@ -51,13 +84,19 @@
     }
 
     >div:nth-child(6){
-        border-left: 8px solid $orange;
+        grid-area: trailtop;
+    }
+
+    >div:nth-child(6){
+        grid-area: frobiddentrail;
+        border-left: 8px solid $agua;
         span{
-            background-color: $orange;
+            background-color: $agua;
         }
     }
 
     >div:nth-child(7){
+        grid-area: whitetrail;
         border-left: 8px solid $off-white;
         span{
             background-color: $off-white;
@@ -65,14 +104,15 @@
     }
 
     >div:nth-child(8){
-
-        border-left: 8px solid $agua;
+        grid-area: orangetrail;
+        border-left: 8px solid $orange;
         span{
-            background-color: $agua;
+            background-color: $orange;
         }
     }
 
     >div:nth-child(9){
+        grid-area: yellowtrail;
         border-left: 8px solid $sun;
         span{
             background-color: $sun;

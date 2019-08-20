@@ -2,11 +2,53 @@
     Visit
 ============= */
 #visit {
-    margin: 0 auto;
     display: grid;
-    grid-template-areas: "visit" "visitors";
-    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+    "vtop"
+    "vtext"
+    "vbtn"
+    "vimg";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(1, auto);
+    margin: 0 auto;
     padding: 40px 24px 80px 24px;
+    grid-gap: 24px;
+
+
+    @include md{
+        align-items: center;
+        grid-template-areas:
+        ". vtop vtop ."
+        ". vtext vtext ."
+        ". vbtn vimg .";
+        grid-template-columns: 10% 60% 20% 10%;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 56px;
+    }
+
+    @include lg{
+        align-items: center;
+        grid-template-areas:
+        ". vtop . ."
+        ". vtop vtext ."
+        ". vtop vbtn ."
+        ". vimg vbtn .";
+        grid-template-columns: 10% 50% 30% 10%;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include xl{
+        align-items: center;
+        grid-template-areas:
+        ". vtop . ."
+        ". vtop vtext ."
+        ". vtop vbtn ."
+        ". vimg . .";
+        grid-template-columns: auto 480px 400px auto;
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 24px;
+    }
+
 
     h2 {
         hyphens: auto;
@@ -24,21 +66,25 @@
     }
 
     div:nth-child(1) {
-        grid-area: visit;
+        grid-area: vtop;
     }
 
     div:nth-child(2) {
-        grid-area: visitors;
+        grid-area: vtext;
+    }
+
+    aside{
+        grid-area: vbtn;
     }
 
     div:nth-child(3) {
         display: flex;
+        grid-area: vimg;
         justify-content: flex-end;
         img{
-            padding: 40px;
             height: 240px;
+            padding: 40px;
         }
     }
-
 
 }

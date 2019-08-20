@@ -4,20 +4,31 @@
 #contact {
     background: $midnight;
     display: grid;
-    display: block;
-    padding: 40px 0px 80px 0px;
-    margin: 0 auto;
+    @include section-padding;
+    display: grid;
+    grid-template-areas:
+    ". form .";
+    grid-template-columns: 20% 60% 20%;
+
+    @include md{
+        grid-template-columns: 30% 40% 30%;
+    }
+
+    @include lg{
+        grid-template-columns: 35% 30% 35%;
+    }
+
 
     > div {
+        grid-area: form;
 
         h1 {
-            padding: 24px;
+            padding: 48px 0px 16px;
             color: $light;
         }
 
-        div {
-            width: 80%;
-            padding: 0 24px;
+        form {
+            padding: 0px;
 
             input {
                 background-color: $black;

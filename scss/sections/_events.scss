@@ -53,6 +53,7 @@
 
     >div:nth-child(1){
         grid-area: 'events';
+        height: 312px;
     }
 
     >div:nth-child(2){
@@ -75,6 +76,13 @@
         background-color: $orange;
         padding: 24px 24px 0px;
         margin: 24px 24px 56px;
+    }
+
+
+    div{
+        div{
+        @include event-size;
+        }
     }
 
 }

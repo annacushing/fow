@@ -41,7 +41,15 @@ a:link {
 
     /* close btn */
     button:hover {
-        color: $orange;
+        border: none;
+        color: $midnight;
+        background-color: $midnight;
+    }
+
+    i:hover{
+        border: none;
+        background-color: none;
+        color: white;
     }
 
     ul {

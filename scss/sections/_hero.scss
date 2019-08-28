@@ -2,6 +2,7 @@
     Hero
 ============= */
 #hero{
+    display: grid;
     grid-template-areas:
     "heroimg"
     "herotext";
@@ -11,23 +12,20 @@
     @include md{
         grid-template-areas:
         "herotext heroimg";
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: 40% 60%;
         grid-template-rows: repeat(1, auto);
     }
 
     @include lg{
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: 30% 70%;
         grid-template-rows: repeat(1, auto);
     }
 
-    @include xl{
-        grid-template-columns: 480px auto;
-    }
 
 
     >div:nth-child(1){
         grid-area: heroimg;
-        background-image: url('../img/hero/hero.jpg');
+        // background-image: url('../img/hero/hero.jpg');
         background-size: cover;
         width: 100%;
         background-repeat: no-repeat;
@@ -67,4 +65,11 @@
             height: 720px;
         }
     }
+}
+
+#trailsvg{
+    z-index: 3;
+    position: relative;
+    width: 100%;
+    top: -120px;
 }

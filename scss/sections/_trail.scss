@@ -4,123 +4,130 @@
 
 #trail{
     background-color: $white;
-    display: grid;
-    grid-template-areas:
-    "trailtop"
-    "forbiddentrail"
-    "whitetrail"
-    "orangetrail"
-    "yellowtrail";
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: repeat(1, auto);
-
-    @include md{
-        grid-template-areas:
-        "trailtop forbiddentrail"
-        "orangetrail orangetrail"
-        "whitetrail yellowtrail";
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-    }
-
-    @include lg{
-        grid-template-areas:
-        "forbiddentrail trailtop"
-        "whitetrail orangetrail"
-        ". yellowtrail";
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-    }
-
-    @include xl{
-        grid-template-areas:
-        "forbiddentrail whitetrail trailtop"
-        ". orangetrail yellowtrail";
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
-    }
-
-    h2{
-        padding: 80px 24px 40px 24px;
-        span{
-            color: $agua;
-        }
-    }
 
     // top colored bars
-    >div:nth-child(1){
-        background-color: $agua;
-        height: 32px;
-    }
-    >div:nth-child(2){
-        background-color: $sun;
-        height: 48px;
-    }
-    >div:nth-child(3){
-        background-color: $off-white;
-        height: 16px;
-    }
-    >div:nth-child(4){
-        background-color: $orange;
-        height: 40px;
-    }
-
-
-
-    div{
-        div{
-            margin-bottom: 72px;
-            padding-left: 16px;
-            h3{
-                font-family: 'DM Serif Text', serif;
-                padding-bottom: 8px;
-            }
-            p{
-                padding-bottom: 12px;
-            }
-            span{
-                font-family: 'Poppins', sans-serif;
-                font-size: rem-calc(18);
-            }
-        }
-    }
-
-    >div:nth-child(6){
-        grid-area: trailtop;
-    }
-
-    >div:nth-child(6){
-        grid-area: frobiddentrail;
-        border-left: 8px solid $agua;
-        span{
+    >aside{
+        >div:nth-child(1){
             background-color: $agua;
+            height: 32px;
         }
-    }
-
-    >div:nth-child(7){
-        grid-area: whitetrail;
-        border-left: 8px solid $off-white;
-        span{
-            background-color: $off-white;
-        }
-    }
-
-    >div:nth-child(8){
-        grid-area: orangetrail;
-        border-left: 8px solid $orange;
-        span{
-            background-color: $orange;
-        }
-    }
-
-    >div:nth-child(9){
-        grid-area: yellowtrail;
-        border-left: 8px solid $sun;
-        span{
+        >div:nth-child(2){
             background-color: $sun;
+            height: 48px;
+        }
+        >div:nth-child(3){
+            background-color: $off-white;
+            height: 16px;
+        }
+        >div:nth-child(4){
+            background-color: $orange;
+            height: 40px;
         }
     }
 
+    // content
+    >section{
+        display: grid;
+        grid-template-areas:
+        "trailtop"
+        "forbiddentrail"
+        "whitetrail"
+        "orangetrail"
+        "yellowtrail";
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: repeat(1, auto);
+
+        @include md{
+            grid-template-areas:
+            "trailtop forbiddentrail"
+            "orangetrail orangetrail"
+            "whitetrail yellowtrail";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+
+        @include lg{
+            grid-template-areas:
+            "forbiddentrail trailtop"
+            "whitetrail orangetrail"
+            ". yellowtrail";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+
+        @include xl{
+            grid-template-areas:
+            "forbiddentrail whitetrail trailtop"
+            ". orangetrail yellowtrail";
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+        }
+
+        h2{
+            padding: 80px 24px 40px 24px;
+            span{
+                color: $agua;
+            }
+        }
+
+        div{
+            div{
+                margin-bottom: 72px;
+                padding-left: 16px;
+                h3{
+                    font-family: 'DM Serif Text', serif;
+                    padding-bottom: 8px;
+                }
+                p{
+                    padding-bottom: 12px;
+                }
+                span{
+                    font-family: 'Poppins', sans-serif;
+                    font-size: rem-calc(18);
+                }
+            }
+        }
+
+        >div:nth-child(1){
+            grid-area: trailtop;
+        }
+
+        >div:nth-child(2){
+            grid-area: frobiddentrail;
+            border-left: 8px solid $agua;
+            span{
+                background-color: $agua;
+            }
+        }
+
+        >div:nth-child(3){
+            grid-area: whitetrail;
+            border-left: 8px solid $off-white;
+            span{
+                background-color: $off-white;
+            }
+        }
+
+        >div:nth-child(4){
+            grid-area: orangetrail;
+            border-left: 8px solid $orange;
+            span{
+                background-color: $orange;
+            }
+        }
+
+        >div:nth-child(5){
+            grid-area: yellowtrail;
+            border-left: 8px solid $sun;
+            span{
+                background-color: $sun;
+            }
+        }
+
+    }
+
+
+    // green hill
     aside{
         height: 160px;
         background-image: url('../img/hills/green-hill.png');

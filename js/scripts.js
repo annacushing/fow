@@ -141,6 +141,8 @@ function openCloseMenu() {
         isVisible = false;
     }
 }
+
+
 // open or close the menu with the burger is tapped / click
 $burger.on("click", openCloseMenu);
 // close the mobile menu when menu links are tapped / click

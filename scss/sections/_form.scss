@@ -1,7 +1,7 @@
 /* =============
-    Contact
+    Form
 ============= */
-#contact {
+#form {
     background: $midnight;
     display: grid;
     @include section-padding;
@@ -30,19 +30,19 @@
         form {
             padding: 0px;
 
-            input {
-                background-color: $black;
-                border: none;
-                border-bottom: 4px solid $agua;
-                color: $light;
-                display: block;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 400;
-                margin: 16px 0;
-                outline: none;
-                padding: 16px 8px;
-                width: 100%;
-            }
+            // input {
+            //     background-color: $black;
+            //     border: none;
+            //     border-bottom: 4px solid $agua;
+            //     color: $light;
+            //     display: block;
+            //     font-family: 'Poppins', sans-serif;
+            //     font-weight: 400;
+            //     margin: 16px 0;
+            //     outline: none;
+            //     padding: 16px 8px;
+            //     width: 100%;
+            // }
         }
     }
 }

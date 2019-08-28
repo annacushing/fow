@@ -10,6 +10,9 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text|Lexend+Deca|Poppins:600&display=swap" rel="stylesheet">
 
+    <!-- Vidback -->
+    <link rel="stylesheet" href="css/jquery.vidbacking.css">
+
     <link rel="stylesheet" href="css/styles.css">
     <title>Friends of the Wissahickon</title>
 </head>
@@ -43,7 +46,7 @@
     <header data-fixed="fixed-item">
         <div>
             <!-- burger icon -->
-            <section id="burger-icon" >
+            <section id="burger-icon">
                 <i class="fas fa-bars"></i>
             </section>
         </div>
@@ -54,11 +57,30 @@
         <div class="js-off-canvas-overlay" id="overlay"></div>
 
         <section id="hero">
-            <div></div>
+            <div id="video-back">
+                <iframe width="988" height="704" src="https://www.youtube.com/watch?v=5gZXcZ_gc-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vidbacking"></iframe>
+                <section>
+                    <a href="#">ADVENTURE</a>
+                </section>
+            </div>
             <div>
                 <h1>FRIENDS OF THE WISSAHICKON <br><span>let's be friends.</span></h1>
             </div>
+            <section id="trailsvg">
+                <svg width="1414px" height="276px" viewBox="0 0 1414 276" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+                    <title>Path 3</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="2,16" stroke-linecap="round">
+                        <g id="Desktop-HD" transform="translate(-45.000000, -708.000000)" stroke="#8B5B46" stroke-width="2">
+                            <path d="M47.1780158,817.522833 C119.039275,822.055946 191.423185,840.889086 262.761793,831.122171 C333.723159,821.406904 395.549772,771.37298 460.395887,742.715652 C515.052261,718.561458 560.400482,708.28066 620.146626,710.44518 C681.096946,712.653326 749.672189,762.755926 778.100954,815.762494 C803.408272,862.949002 845.835923,958.110007 903.12829,975.022647 C976.042314,996.546782 1044.53341,958.186076 1113.53205,942.146157 C1296.58901,899.591424 1484.72707,866.829493 1672.61996,854.771312"
+                                id="Path-3"></path>
+                        </g>
+                    </g>
+                </svg>
+            </section>
         </section>
+
 
         <section id="visit">
             <!-- visit -->
@@ -113,43 +135,51 @@
         <section id="trail">
 
             <!-- color bars -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <aside>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </aside>
 
-            <div>
-                <h2>choose your <br><span>TRAIL</span></h2>
-            </div>
-            <div>
+            <section>
                 <div>
-                    <h3>Forbidden Drive</h3>
-                    <p>5.35 Miles <br>Average width 25 feet <br>Max obstacle height 3 inches <br>Average Grade: 3% <br>Wide, flat, multi-use gravel path</p>
-                    <span>VERY SCENIC</span>
+                    <h2>choose your <br><span>TRAIL</span></h2>
                 </div>
-            </div>
-            <div>
                 <div>
-                    <h3>White Trail</h3>
-                    <p>4.39 Miles <br>Average width 3 feet <br>Max obstacle height 24 inches <br>Average Grade: 10% <br>Single track, natural surface</p>
-                    <span>MOST POPULAR</span>
+                    <div>
+                        <h3>Forbidden Drive</h3>
+                        <p>5.35 Miles <br>Average width 25 feet <br>Max obstacle height 3 inches <br>Average Grade: 3% <br>Wide, flat, multi-use gravel path</p>
+                        <span>VERY SCENIC</span>
+                    </div>
                 </div>
-            </div>
-            <div>
                 <div>
-                    <h3>Orange Trail</h3>
-                    <p>5.64 Miles <br>Average width 3 feet <br>Max obstacle height 24 inches <br>Average Grade: 11% <br>Single track, natural surface </p>
-                    <span>BEST WORKOUT</span>
+                    <div>
+                        <h3>White Trail</h3>
+                        <p>4.39 Miles <br>Average width 3 feet <br>Max obstacle height 24 inches <br>Average Grade: 10% <br>Single track, natural surface</p>
+                        <span>MOST POPULAR</span>
+                    </div>
                 </div>
-            </div>
-            <div>
                 <div>
-                    <h3>Yellow Trail</h3>
-                    <p>7.89 Miles <br>Average width 3 feet <br>Max obstacle height 24 inches <br>Average Grade: 9% <br>Single track, natural surface</p>
-                    <span>MOST AMBITIOUS</span>
+                    <div>
+                        <h3>Orange Trail</h3>
+                        <p>5.64 Miles <br>Average width 3 feet <br>Max obstacle height 24 inches <br>Average Grade: 11% <br>Single track, natural surface </p>
+                        <span>BEST WORKOUT</span>
+                    </div>
                 </div>
-            </div>
-            <aside></aside>
+                <div>
+                    <div>
+                        <h3>Yellow Trail</h3>
+                        <p>7.89 Miles <br>Average width 3 feet <br>Max obstacle height 24 inches <br>Average Grade: 9% <br>Single track, natural surface</p>
+                        <span>MOST AMBITIOUS</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- green hills -->
+            <aside>
+
+            </aside>
         </section>
 
         <section id="gallery">
@@ -162,10 +192,15 @@
                     <li></li>
                 </ul>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+            <!-- colored bars -->
+            <aside>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </aside>
+
         </section>
 
 
@@ -279,14 +314,24 @@
         </section>
 
 
-        <section id="contact">
+        <section id="form">
             <div>
                 <h1>TALK TO US</h1>
                 <form>
-                    <input type="text" placeholder="Name" required>
+                    <span class="input input--shoko">
+                        <input class="input__field input__field--shoko" type="text" id="input-4" />
+                        <label class="input__label input__label--shoko" for="input-4">
+                            <span class="input__label-content input__label-content--shoko">Player Name</span>
+                        </label>
+                        <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+                            <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+                        </svg>
+                    </span>
+                    <!-- <input type="text" placeholder="Name" required>
                     <input type="text" placeholder="Email" required>
                     <input type="text" placeholder="Message" required>
-                    <button type="button" name="SEND">SEND</button>
+                    <button type="button" name="SEND">SEND</button> -->
                 </form>
             </div>
         </section>
@@ -315,6 +360,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
     <script src="js/scripts.js"></script>
+
+    <!-- advanced forms -->
+    <script src="js/classie.js"></script>
+
+    <script>
+        (function() {
+            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+            if (!String.prototype.trim) {
+                (function() {
+                    // Make sure we trim BOM and NBSP
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function() {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
+                // in case the input is already filled..
+                if (inputEl.value.trim() !== '') {
+                    classie.add(inputEl.parentNode, 'input--filled');
+                }
+
+                // events:
+                inputEl.addEventListener('focus', onInputFocus);
+                inputEl.addEventListener('blur', onInputBlur);
+            });
+
+            function onInputFocus(ev) {
+                classie.add(ev.target.parentNode, 'input--filled');
+            }
+
+            function onInputBlur(ev) {
+                if (ev.target.value.trim() === '') {
+                    classie.remove(ev.target.parentNode, 'input--filled');
+                }
+            }
+        })();
+    </script>
+
 </body>
 
 </html>

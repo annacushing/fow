@@ -43,6 +43,7 @@
     > div:nth-child(1) {
         @include green-gradient;
         grid-area: faq;
+        padding: 32px 24px 40px;
 
         @include sm{
             padding: 80px 24px 40px;

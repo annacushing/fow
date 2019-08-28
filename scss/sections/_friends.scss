@@ -39,21 +39,22 @@
     }
 
     div:nth-child(1){
+
+    }
+
+    div:nth-child(2){
         @include md{
             width: 40%;
             margin-left: 24px;
         }
     }
 
-    div:nth-child(2){
+    div:nth-child(3){
         display: grid;
-
-        @include sm{
-            grid-template-areas:
-            "card1"
-            "card2";
-            grid-template-rows: repeat(2, auto);
-        }
+        grid-template-areas:
+        "card1"
+        "card2";
+        grid-template-rows: repeat(2, auto);
 
         @include md{
             grid-template-areas:
@@ -64,17 +65,32 @@
             "card1 card2"
             "card1 .";
             grid-template-rows: repeat(6, auto);
+            grid-template-columns: repeat(2, auto);
             grid-gap: 40px;
         }
 
         @include lg{
             grid-template-areas:
-            "card1 card1 card1"
-            "card2 card2 card2";
-            display: flex;
-            grid-template-rows: repeat(2, auto);
+            ". . card2 ."
+            ". card1 card2 ."
+            ". card1 card2 ."
+            ". card1 card2 ."
+            ". card1 card2 ."
+            ". card1 . .";
+            grid-template-rows: repeat(6, auto);
+            grid-template-columns: repeat(4, auto);
             grid-gap: 40px;
         }
+
+        // @include lg{
+        //     grid-template-areas:
+        //     "card1 card1 card1"
+        //     "card2 card2 card2";
+        //     display: flex;
+        //     grid-template-columns: repeat(3, auto);
+        //     grid-template-rows: repeat(2, auto);
+        //     grid-gap: 40px;
+        // }
 
         ul:nth-child(1){
             grid-area: card1;

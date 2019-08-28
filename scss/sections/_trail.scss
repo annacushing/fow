@@ -4,6 +4,7 @@
 
 #trail{
     background-color: $white;
+    display: grid;
     grid-template-areas:
     "trailtop"
     "forbiddentrail"
@@ -11,13 +12,14 @@
     "orangetrail"
     "yellowtrail";
     grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(1, auto);
 
     @include md{
         grid-template-areas:
         "trailtop forbiddentrail"
         "orangetrail orangetrail"
         "whitetrail yellowtrail";
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
     }
 
@@ -26,7 +28,7 @@
         "forbiddentrail trailtop"
         "whitetrail orangetrail"
         ". yellowtrail";
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
     }
 
@@ -34,7 +36,7 @@
         grid-template-areas:
         "forbiddentrail whitetrail trailtop"
         ". orangetrail yellowtrail";
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
     }
 

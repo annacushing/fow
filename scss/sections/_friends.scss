@@ -43,17 +43,13 @@
     }
 
     div:nth-child(1){
-
-    }
-
-    div:nth-child(2){
         @include md{
             width: 40%;
             margin-left: 24px;
         }
     }
 
-    div:nth-child(3){
+    div:nth-child(2){
         display: grid;
         grid-template-areas:
         "card1"

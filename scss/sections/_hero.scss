@@ -7,7 +7,8 @@
     "heroimg"
     "herotext";
     grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: 300px auto;
+    margin: 0 auto;
 
     @include md{
         grid-template-areas:
@@ -30,6 +31,7 @@
         display: flex;
         grid-area: heroimg;
         width: 100%;
+        margin: 0 auto;
         @include hero-height;
 
 
@@ -42,6 +44,6 @@
         grid-area: herotext;
         @include header-padding;
         @include green-gradient;
-        @include hero-height;
+        // @include hero-height;
     }
 }

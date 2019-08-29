@@ -1,7 +1,9 @@
 /* =============
     Gallery
 ============= */
-#gallery {
+
+
+#gallery-trail{
     div{
         background-color: $white;
     }
@@ -107,3 +109,47 @@
         }
     }
 }
+
+// #gallery-friend{
+//     >div{
+//         display: grid;
+//         grid-template-areas:
+//         ". volunteer3 volunteer3"
+//         "volunteer2 volunteer2 volunteer1"
+//         ". . volunteer1";
+//         grid-template-rows: repeat(3, auto);
+//         grid-template-columns: 40% auto 30%;
+//         grid-gap: 24px;
+//
+//         @include md{
+//             grid-template-areas:
+//             ". volunteer2 volunteer2"
+//             "volunteer3 volunteer1 volunteer1"
+//             "volunteer3 . .";
+//         }
+//
+//         ul{
+//             li {
+//                 background-size: cover;
+//                 height: 100%;
+//             }
+//
+//             li:nth-child(1) {
+//                 background-image: url("../img/friend/friend.jpg");
+//                 grid-area: friend1;
+//             }
+//
+//             li:nth-child(2) {
+//                 background-image: url("../img/friend/friend2.jpg");
+//                 background-position: top center;
+//                 grid-area: friend2;
+//             }
+//             li:nth-child(3) {
+//                 background-image: url("../img/friend/friend3.jpg");
+//                 grid-area: friend3;
+//                 background-position: center;
+//             }
+//         }
+//
+//     }
+// }

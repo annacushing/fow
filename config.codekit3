@@ -60,6 +60,14 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/friend/thanks.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/img/friend/thanks.html",
+		"oF": 0
+		},
 	"/img/gallery/gallery1.jpg": {
 		"ft": 16384,
 		"iS": 82633,
@@ -369,6 +377,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/scss/components/_thanks.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/components/_thanks.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/components/dont-touch/_navigation-helpers.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -602,6 +623,14 @@
 		"oF": 2,
 		"oS": 0,
 		"uL": 1
+		},
+	"/thanks.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/thanks.html",
+		"oF": 0
 		}
 	},
 "hooks": [

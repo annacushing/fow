@@ -34,11 +34,12 @@
 
         @include md{
             grid-template-areas:
-            "plantop ."
-            "hike ."
-            "hike run"
-            "bike run"
-            "bike .";
+            ". plantop . ."
+            ". hike . ."
+            ". hike run ."
+            ". bike run ."
+            ". bike . .";
+            grid-template-columns: auto 40% 40% auto;
             grid-gap: 40px;
         }
 
@@ -49,7 +50,8 @@
             "hike bike"
             "hike run"
             ". run";
-            grid-gap: 64px;
+            grid-template-columns: 50% 50%;
+            grid-gap: 0px;
         }
 
         @include xl{

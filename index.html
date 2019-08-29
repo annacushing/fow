@@ -10,6 +10,9 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text|Lexend+Deca|Poppins:600&display=swap" rel="stylesheet">
 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
     <link rel="stylesheet" href="css/styles.css">
     <title>Friends of the Wissahickon</title>
 </head>
@@ -160,7 +163,7 @@
             <!-- <aside></aside> -->
         </section>
 
-        <section id="gallery">
+        <section id="gallery-trail">
             <div>
                 <ul>
                     <!-- images -->
@@ -221,7 +224,7 @@
             </div>
         </section>
 
-        <section id="friends">
+        <!-- <section id="gallery-friend">
             <div>
                 <ul>
                     <li></li>
@@ -231,6 +234,9 @@
                     <li></li>
                 </ul>
             </div>
+        </section> -->
+
+        <section id="friends">
             <div>
                 <h2>become a <br><span>FRIEND</span></h2>
                 <p>Join our community of over 2,400 like-minded individuals who care for and support Wissahickon Valley Park, a community treasure of 1,800-acres of wooded gorge within the city of Philadelphia</p>
@@ -307,12 +313,43 @@
         <section id="contact">
             <div>
                 <h1>TALK TO US</h1>
-                <form>
-                    <input type="text" placeholder="Name" required>
-                    <input type="text" placeholder="Email" required>
-                    <input type="text" placeholder="Message" required>
-                    <button type="button" name="SEND">SEND</button>
-                </form>
+                <form action="https://formspree.io/annamcushing@gmail.com" method="POST">
+                        <!-- company name -->
+                        <!-- <div>
+                            <label>
+                                <input type="text" placeholder="Company Name" name="Company Name">
+                                <input type="hidden" name="_next" value="http://www.gdovindesigns.com/client/drexel/web2/form/thanks.html" />
+                                <input type="text" name="_gotcha" style="display:none" />
+                            </label>
+                        </div> -->
+                        <!-- first name -->
+                        <div>
+                            <label>
+                                <input type="text" placeholder="First Name" name="First Name">
+                            </label>
+                        </div>
+                        <!-- last name -->
+                        <div>
+                            <label>
+                                <input type="text" placeholder="Last Name" name="Last Name">
+                            </label>
+                        </div>
+                        <!-- email -->
+                        <div>
+                            <label>
+                                <input type="email" placeholder="Email" name="Email" required>
+                            </label>
+                        </div>
+                        <!-- message -->
+                        <div>
+                            <label>
+                                <textarea placeholder="Message" name="Message"></textarea>
+                            </label>
+                        </div>
+                        <div>
+                            <button type="submit" class="button" value="send">Send</button>
+                        </div>
+                    </form>
             </div>
         </section>
 

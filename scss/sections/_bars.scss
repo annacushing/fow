@@ -1,0 +1,42 @@
+/* =============
+    Bars
+============= */
+#bars1{
+    // top colored bars
+    >div:nth-child(1){
+        background-color: $sun;
+        height: 32px;
+    }
+    >div:nth-child(2){
+        background-color: $tree;
+        height: 48px;
+    }
+    >div:nth-child(3){
+        background-color: $off-white;
+        height: 16px;
+    }
+    >div:nth-child(4){
+        background-color: $orange;
+        height: 40px;
+    }
+}
+
+#bars2{
+    // colored bars
+    >div:nth-child(1){
+        background-color: $off-white;
+        height: 48px;
+    }
+    >div:nth-child(2){
+        background-color: $sun;
+        height: 16px;
+    }
+    >div:nth-child(3){
+        background-color: $agua;
+        height: 32px;
+    }
+    >div:nth-child(4){
+        background-color: $tree;
+        height: 40px;
+    }
+}

@@ -8,7 +8,7 @@
 a:hover,
 a:link {
     text-decoration: none;
-    transition: 0.25s;
+    transition: 0.2s;
 }
 
 
@@ -30,19 +30,26 @@ a:link {
     button {
         background-color: transparent;
         border: none;
-        color: $white;
+        outline: none;
+        color: $light;
         cursor: pointer;
         font-size: rem-calc(25);
         margin-bottom: 20px;
         text-align: right;
         transition: 0.25s;
         width: 100%;
+        :hover, :active{
+            border: none;
+            outline: none;
+            background: transparent;
+            color: $orange;
+        }
+        i{
+            color: $light;
+        }
+
     }
 
-    /* close btn */
-    button:hover {
-        color: $orange;
-    }
 
     ul {
         li {
@@ -50,7 +57,7 @@ a:link {
             margin-bottom: 20px;
             a:link,
             a:visited {
-                color: #fff;
+                color: $white;
             }
 
             a:active,
@@ -61,18 +68,33 @@ a:link {
     }
 }
 
+#logo{
+    position: fixed;
+    left: 16px;
+    top: 16px;
+    img{
+        height: 40px;
+    }
+}
 
 #burger-icon {
-    @include btn-style;
-    font-size: rem-calc(23);
-    padding: 10px 12px 8px 12px;
+    border: none;
+    outline: none;
+    font-size: rem-calc(22);
+    color: $black;
     position: fixed;
     right: 16px;
     top: 16px;
     z-index: 100;
-}
-
-#burger-icon:hover {
-    background-color: $black;
-    color: $orange;
+    :hover, :active{
+        background: $orange;
+        border-bottom: 4px solid $sun;
+        padding: 8px 12px 6px 12px;
+        color: $white;
+    }
+    i{
+        background: $light;
+        border-bottom: 4px solid $agua;
+        padding: 8px 12px 6px 12px;
+    }
 }

@@ -2,12 +2,15 @@
     FAQ
 ============= */
 #faq {
-    padding: 40px 0px 0px 0px;
+    @include section-padding;
     display: grid;
     grid-template-areas:
-    "faq"
-    "questions";
+    "faq ."
+    "questions questions"
+    "faqimg faqimg";
     grid-template-rows: repeat(2, auto);
+    grid-template-columns: 45% 55%;
+    grid-gap: 0;
 
 
     @include md{
@@ -33,6 +36,18 @@
         grid-template-columns: 40% 50% 10%;
     }
 
+    @include xl{
+        grid-template-areas:
+        ". faq . . ."
+        ". faq questions . ."
+        ". faq questions . ."
+        ". faqimg faqimg faqimg .";
+        grid-template-columns: auto 400px 800px 240px auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+
+
     h2{
         color: $black;
         text-align: right;
@@ -43,11 +58,7 @@
     > div:nth-child(1) {
         @include green-gradient;
         grid-area: faq;
-        padding: 32px 24px 40px;
-
-        @include sm{
-            padding: 80px 24px 40px;
-        }
+        padding: 32px 24px 40px 24px;
 
         @include lg{
             margin: 160px 16px 160px 0px;
@@ -88,28 +99,19 @@
             div:nth-child(1),
             div:nth-child(4) {
                 background-color: $sun;
-                border-radius: 32px;
-                height: 32px;
-                margin: 0 8px;
-                width: 32px;
+                @include colored-circles;
             }
 
             div:nth-child(2),
             div:nth-child(5) {
                 background-color: $tree;
-                border-radius: 32px;
-                height: 32px;
-                margin: 0 8px;
-                width: 32px;
+                @include colored-circles;
             }
 
             div:nth-child(3),
             div:nth-child(6) {
                 background-color: $agua;
-                border-radius: 32px;
-                height: 32px;
-                margin: 0 8px;
-                width: 32px;
+                @include colored-circles;
             }
         }
     }
@@ -122,25 +124,5 @@
         display: flex;
         height: 457px;
         width: 100%;
-    }
-
-
-    aside{
-        grid-area: faqimg;
-        height: 160px;
-        background-image: url('../img/hills/green-hill.png');
-        background-size: cover;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        @include sm{
-            height: 240px;
-            background-position: center center;
-        }
-        @include md{
-            height: 320px;
-            background-position: center center;
-        }
     }
 }

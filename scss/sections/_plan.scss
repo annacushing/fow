@@ -3,31 +3,30 @@
 ============= */
 #plan {
     margin: 0 auto;
-    background: $midnight;
-    background-image: url('../img/hero/papyrus-dark.png');
-    padding: 40px 0px 80px 0px;
+    background: $agua;
+    // background-image: url('../img/hero/papyrus.png');
+    @include section-padding;
 
     h2 {
-        padding-left: 24px;
-        padding-bottom: 40px;
-        color: $off-white;
+        @include header-padding;
+        color: $black;
         span {
-            color: $agua;
+            color: $off-white;
         }
     }
 
     h3{
-        color: $black;
+        color: $off-white;
         font-family: 'DM Serif Text', serif;
         font-size: rem-calc(32);
         line-height: rem-calc(32);
         padding-left: 24px;
     }
 
-
-    div:nth-child(2) {
+    >div {
         display: grid;
         grid-template-areas:
+        "plantop"
         "hike"
         "bike"
         "run";
@@ -35,6 +34,7 @@
 
         @include md{
             grid-template-areas:
+            "plantop ."
             "hike ."
             "hike run"
             "bike run"
@@ -45,6 +45,7 @@
         @include lg{
             grid-template-areas:
             ". bike"
+            "plantop bike"
             "hike bike"
             "hike run"
             ". run";
@@ -53,35 +54,31 @@
 
         @include xl{
             grid-template-areas:
-            "hike run bike";
-            grid-gap: 56px;
+            ". hike plantop bike ."
+            ". hike run bike .";
+            grid-template-columns: auto 400px 320px 400px auto;
+            grid-template-rows: 10% 90%;
+            grid-gap: 0 40px;
         }
+
+
 
         aside {
             margin-top: 40px;
             padding-bottom: 80px;
-            @include sm{
-                padding-left: 16px;
-            }
-
-            @include md{
-                padding: 0px;
-            }
 
             > div:nth-child(2) {
+                border-left: 8px solid $light;
                 h3 {
-                    color: $light;
+                    color: $off-white;
                 }
 
                 p {
-                    color: $white;
-                    // border-left: 8px solid $agua;
+                    color: $black;
+                    // border-right: 8px solid $light;
                     margin-top: 16px;
                     padding-left: 24px;
                     padding-right: 24px;
-                    @include lg{
-                        padding-right: 0px;
-                    }
                 }
 
                 span {
@@ -90,7 +87,11 @@
             }
         }
 
-        aside:nth-child(1) {
+        aside:nth-child(1){
+            grid-area: plantop;
+        }
+
+        aside:nth-child(2) {
             grid-area: hike;
             div:nth-child(1) {
                 background-image: url("../img/plan/hike.jpg");
@@ -101,10 +102,13 @@
                 height: 280px;
                 width: 100%;
                 margin-bottom: 40px;
+                @include xl{
+                    height: 400px;
+                }
             }
         }
 
-        aside:nth-child(2) {
+        aside:nth-child(3) {
             grid-area: bike;
             div:nth-child(1) {
                 background-image: url("../img/plan/bike.jpg");
@@ -115,10 +119,13 @@
                 height: 280px;
                 width: 100%;
                 margin-bottom: 40px;
+                @include xl{
+                    height: 400px;
+                }
             }
         }
 
-        aside:nth-child(3) {
+        aside:nth-child(4) {
             grid-area: run;
             div:nth-child(1) {
                 background-image: url("../img/plan/run.jpg");
@@ -134,7 +141,5 @@
                 }
             }
         }
-
-
     }
 }

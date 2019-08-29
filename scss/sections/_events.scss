@@ -6,38 +6,37 @@
     background-color: $midnight;
     display: grid;
     margin: 0 auto;
-    padding: 40px 24px 80px 24px;
-
-    @include sm{
-        grid-template-areas:
-        "events"
-        "events1"
-        "events2"
-        "events3";
-        grid-template-rows: repeat(4, auto);
-
-    }
+    grid-template-areas:
+    "events"
+    "events1"
+    "events2"
+    "events3";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(1, auto);
+    // padding: 40px 24px 80px 24px;
 
     @include md{
         grid-template-areas:
-        "events events1"
-        "events2 events3";
+        ". events events1 ."
+        ". events2 events3 .";
         grid-template-rows: repeat(2, auto);
-        grid-template-columns: 50% 50%;
+        grid-template-columns: auto 40% 40% auto;
     }
 
     @include lg{
         grid-template-areas:
-        ". events events1 events2 events3 .";
-        grid-template-columns: repeat(6, auto);
+        ". events . . ."
+        ". events1 events2 events3 .";
+        grid-template-columns: auto 300px 300px 300px auto;
         grid-template-rows: repeat(1, auto);
-        padding: 0 24px;
+        grid-gap: 0 16px;
     }
+
 
     h2{
         color: $light;
-        padding-top: 80px;
-        padding-left: 24px;
+        @include header-padding;
+        margin-top: 40px;
 
         span{
             color: $agua;
@@ -52,11 +51,11 @@
     }
 
     >div:nth-child(1){
-        grid-area: 'events';
+        grid-area: events;
     }
 
     >div:nth-child(2){
-        grid-area: 'events1';
+        grid-area: events1;
         background-color: $tree;
         padding: 24px 24px 0px;
         margin: 24px 24px 56px;
@@ -64,14 +63,14 @@
     }
 
     >div:nth-child(3){
-        grid-area: 'events2';
+        grid-area: events2;
         background-color: $sun;
         padding: 24px 24px 0px;
         margin: 24px 24px 56px;
     }
 
     >div:nth-child(4){
-        grid-area: 'events3';
+        grid-area: events3;
         background-color: $orange;
         padding: 24px 24px 0px;
         margin: 24px 24px 56px;

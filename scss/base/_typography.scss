@@ -25,14 +25,12 @@ h2 {
 
     color: $black;
     font-family: 'DM Serif Text', serif;
-    font-size: rem-calc(32);
-    line-height: rem-calc(40);
+    @include h2-respons;
 
     span {
         color: $black;
         font-family: 'Lexend Deca', sans-serif;
-        font-size: rem-calc(40);
-        line-height: rem-calc(40);
+        @include span-respons;
     }
 }
 

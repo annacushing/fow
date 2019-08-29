@@ -1,0 +1,54 @@
+/* =============
+    Hills
+============= */
+
+#hill1{
+    height: 160px;
+    background-image: url('../img/hills/yellow-hill.png');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    @include sm{
+        height: 240px;
+        background-position: center center;
+    }
+    @include md{
+        height: 320px;
+        background-position: center center;
+    }
+
+    @include lg{
+        height: 400px;
+        background-position: bottom center;
+    }
+
+    @include xl{
+        height: 480px;
+        background-position: bottom center;
+    }
+}
+
+#hill2{
+    height: 160px;
+    background-image: url('../img/hills/green-hill.png');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    @include sm{
+        height: 240px;
+        background-position: center center;
+    }
+    @include md{
+        height: 320px;
+        background-position: center center;
+    }
+
+    @include xl{
+        height: 480px;
+        background-position: bottom center;
+    }
+}

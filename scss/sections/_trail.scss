@@ -7,25 +7,26 @@
     display: grid;
     grid-template-areas:
     "trailtop"
-    "forbiddentrail"
+    "forbidden"
     "whitetrail"
     "orangetrail"
     "yellowtrail";
     grid-template-rows: repeat(5, auto);
     grid-template-columns: repeat(1, auto);
+    @include section-padding;
 
     @include md{
         grid-template-areas:
-        "trailtop forbiddentrail"
-        "orangetrail orangetrail"
-        "whitetrail yellowtrail";
-        grid-template-columns: repeat(2, 1fr);
+        ". trailtop forbidden ."
+        ". orangetrail orangetrail ."
+        ". whitetrail yellowtrail .";
+        grid-template-columns: auto 40% 40% auto;
         grid-template-rows: repeat(3, auto);
     }
 
     @include lg{
         grid-template-areas:
-        "forbiddentrail trailtop"
+        "forbidden trailtop"
         "whitetrail orangetrail"
         ". yellowtrail";
         grid-template-columns: repeat(2, 1fr);
@@ -34,41 +35,26 @@
 
     @include xl{
         grid-template-areas:
-        "forbiddentrail whitetrail trailtop"
-        ". orangetrail yellowtrail";
-        grid-template-columns: repeat(3, 1fr);
+        ". forbidden whitetrail trailtop ."
+        ". . orangetrail yellowtrail .";
+        grid-template-columns: auto 320px 320px 320px auto;
         grid-template-rows: repeat(2, auto);
+        grid-gap: 40px;
     }
 
     h2{
-        padding: 80px 24px 40px 24px;
+        @include header-padding;
+        @include lg{
+            padding: 0px;
+            margin-top: 32px;
+        }
         span{
             color: $agua;
         }
     }
 
-    // top colored bars
-    >div:nth-child(1){
-        background-color: $agua;
-        height: 32px;
-    }
-    >div:nth-child(2){
-        background-color: $sun;
-        height: 48px;
-    }
-    >div:nth-child(3){
-        background-color: $off-white;
-        height: 16px;
-    }
-    >div:nth-child(4){
-        background-color: $orange;
-        height: 40px;
-    }
-
-
-
-    div{
-        div{
+    >div{
+        >div{
             margin-bottom: 72px;
             padding-left: 16px;
             h3{
@@ -85,19 +71,22 @@
         }
     }
 
-    >div:nth-child(6){
+    >div:nth-child(1){
         grid-area: trailtop;
+        div{
+            @include header-padding;
+        }
     }
 
-    >div:nth-child(6){
-        grid-area: frobiddentrail;
+    >div:nth-child(2){
+        grid-area: forbidden;
         border-left: 8px solid $agua;
         span{
             background-color: $agua;
         }
     }
 
-    >div:nth-child(7){
+    >div:nth-child(3){
         grid-area: whitetrail;
         border-left: 8px solid $off-white;
         span{
@@ -105,7 +94,7 @@
         }
     }
 
-    >div:nth-child(8){
+    >div:nth-child(4){
         grid-area: orangetrail;
         border-left: 8px solid $orange;
         span{
@@ -113,7 +102,7 @@
         }
     }
 
-    >div:nth-child(9){
+    >div:nth-child(5){
         grid-area: yellowtrail;
         border-left: 8px solid $sun;
         span{
@@ -121,22 +110,22 @@
         }
     }
 
-    aside{
-        height: 160px;
-        background-image: url('../img/hills/green-hill.png');
-        background-size: cover;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        @include sm{
-            height: 240px;
-            background-position: -220px center;
-        }
-        @include md{
-            height: 320px;
-            background-position: center;
-        }
-    }
+    // aside{
+    //     height: 160px;
+    //     background-image: url('../img/hills/green-hill.png');
+    //     background-size: cover;
+    //     width: 100%;
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     display: flex;
+    //     @include sm{
+    //         height: 240px;
+    //         background-position: -220px center;
+    //     }
+    //     @include md{
+    //         height: 320px;
+    //         background-position: center;
+    //     }
+    // }
 
 }

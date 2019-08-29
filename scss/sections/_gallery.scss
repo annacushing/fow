@@ -1,23 +1,109 @@
 /* =============
-    Visit
+    Gallery
 ============= */
-#gallery{
+#gallery {
+    div{
+        background-color: $white;
+    }
+    ul {
+        display: grid;
+        grid-gap: 24px;
+        margin: 0 auto;
 
-    // colored bars
-    >div:nth-child(2){
-        background-color: $off-white;
-        height: 48px;
-    }
-    >div:nth-child(3){
-        background-color: $sun;
-        height: 16px;
-    }
-    >div:nth-child(4){
-        background-color: $agua;
-        height: 32px;
-    }
-    >div:nth-child(5){
-        background-color: $orange;
-        height: 40px;
+        @include sm{
+            grid-template-areas:
+            ". agua . ."
+            ". gallery5 gallery5 ."
+            ". . orange .";
+            grid-template-columns: auto 50% 35% auto;
+            grid-template-rows: 24px 320px 64px;
+        }
+
+        @include md{
+            grid-gap: 32px;
+            grid-template-areas:
+            ". gallery1 . ."
+            ". gallery1 agua ."
+            ". gallery1 gallery3 ."
+            ". gallery2 gallery3 ."
+            ". . gallery3 .";
+            grid-template-columns: auto 40% 45% auto;
+            grid-template-rows: 80px 40px 80px 240px 80px;
+        }
+
+        @include lg{
+            grid-gap: 24px;
+            grid-template-areas:
+            "gallery1 . . . . ."
+            "gallery1 gallery4 gallery4 . . ."
+            ". gallery2 gallery2 gallery2 gallery3 ."
+            ". gallery2 gallery2 gallery2 gallery3 orange"
+            ". . agua agua gallery3 gallery5"
+            ". . . sun gallery3 gallery5";
+            margin: 0 auto;
+            grid-template-columns: 15% auto 10% 10% 22% auto;
+            grid-template-rows: 80px 120px 80px 120px 40px 240px;
+        }
+
+        // @include xl{
+        //     grid-gap: 24px;
+        //     grid-template-areas:
+        //     "gallery5 sun . . ."
+        //     "gallery5 gallery3 gallery4 . ."
+        //     "gallery2 gallery2 gallery3 gallery4 gallery1"
+        //     "gallery2 sun agua gallery orange";
+        //     margin: 0 auto;
+        //     grid-template-columns: 20% auto 20% auto 30%;
+        //     grid-template-rows: 80px 80px 80px 120px 40px 240px;
+        // }
+
+
+        li {
+            background-size: cover;
+            height: 100%;
+        }
+
+        li:nth-child(1) {
+            background-image: url("../img/gallery/gallery1.jpg");
+            grid-area: gallery1;
+        }
+
+        // dog
+        li:nth-child(2) {
+            background-image: url("../img/gallery/gallery2.jpg");
+            background-position: top center;
+            grid-area: gallery2;
+        }
+        li:nth-child(3) {
+            background-image: url("../img/gallery/gallery3.jpg");
+            grid-area: gallery3;
+            background-position: center;
+        }
+        li:nth-child(4) {
+            background-image: url("../img/gallery/gallery4.jpg");
+            grid-area: gallery4;
+            background-position: top center;
+        }
+
+        // girl from back
+        li:nth-child(5) {
+            background-image: url("../img/gallery/gallery5.jpg");
+            background-position: bottom;
+            grid-area: gallery5;
+        }
+
+
+        li:nth-child(6) {
+            background-color: $agua;
+            grid-area: agua;
+        }
+        li:nth-child(7) {
+            background-color: $sun;
+            grid-area: sun;
+        }
+        li:nth-child(8) {
+            background-color: $orange;
+            grid-area: orange;
+        }
     }
 }

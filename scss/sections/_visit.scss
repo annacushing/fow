@@ -5,47 +5,46 @@
     display: grid;
     grid-template-areas:
     "vtop"
+    "vcircles"
     "vtext"
-    "vbtn"
-    "vimg";
+    "vbtn";
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(1, auto);
     margin: 0 auto;
-    padding: 40px 24px 80px 24px;
     grid-gap: 24px;
+    @include section-padding;
 
 
     @include md{
         align-items: center;
         grid-template-areas:
-        ". vtop vtop ."
-        ". vtext vtext ."
-        ". vbtn vimg .";
-        grid-template-columns: 10% 60% 20% 10%;
+        ". vtop . ."
+        ". vtext vbtn ."
+        ". vcircles vcircles .";
+        grid-template-columns: auto 50% 40% auto;
         grid-template-rows: repeat(3, auto);
-        grid-gap: 56px;
+        grid-gap: 40px;
     }
 
     @include lg{
         align-items: center;
         grid-template-areas:
-        ". vtop . ."
+        ". vcircles . ."
         ". vtop vtext ."
         ". vtop vbtn ."
-        ". vimg vbtn .";
-        grid-template-columns: 10% 50% 30% 10%;
+        ". . vbtn .";
+        grid-template-columns: auto 50% 30% auto;
         grid-template-rows: repeat(3, auto);
     }
 
     @include xl{
         align-items: center;
         grid-template-areas:
-        ". vtop . ."
+        ". vcircles . ."
         ". vtop vtext ."
-        ". vtop vbtn ."
-        ". vimg . .";
+        ". vtop vbtn .";
         grid-template-columns: auto 480px 400px auto;
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(3, auto);
         grid-gap: 24px;
     }
 
@@ -66,25 +65,39 @@
     }
 
     div:nth-child(1) {
-        grid-area: vtop;
+        grid-area: vcircles;
+        display: flex;
+        // padding: 16px;
+
+        div:nth-child(1),
+        div:nth-child(4) {
+            background-color: $sun;
+            @include colored-circles;
+        }
+
+        div:nth-child(2),
+        div:nth-child(5) {
+            background-color: $tree;
+            @include colored-circles;
+        }
+
+        div:nth-child(3),
+        div:nth-child(6) {
+            background-color: $agua;
+            @include colored-circles;
+        }
     }
 
     div:nth-child(2) {
+        grid-area: vtop;
+    }
+
+    div:nth-child(3) {
         grid-area: vtext;
     }
 
     aside{
         grid-area: vbtn;
-    }
-
-    div:nth-child(3) {
-        display: flex;
-        grid-area: vimg;
-        justify-content: flex-end;
-        img{
-            height: 240px;
-            padding: 40px;
-        }
     }
 
 }

@@ -2,69 +2,46 @@
     Hero
 ============= */
 #hero{
+    display: grid;
     grid-template-areas:
     "heroimg"
     "herotext";
+    grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
 
     @include md{
         grid-template-areas:
         "herotext heroimg";
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: 40% auto;
         grid-template-rows: repeat(1, auto);
     }
 
     @include lg{
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: 30% auto;
         grid-template-rows: repeat(1, auto);
-    }
-
-    @include xl{
-        grid-template-columns: 480px auto;
     }
 
 
     >div:nth-child(1){
-        grid-area: heroimg;
         background-image: url('../img/hero/hero.jpg');
-        background-size: cover;
-        width: 100%;
-        background-repeat: no-repeat;
         background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
+        grid-area: heroimg;
+        width: 100%;
+        @include hero-height;
 
-        @include sm{
-            height: 280px;
-        }
-        @include md{
-            height: 520px;
-        }
-        @include lg{
-            height: 740px;
-        }
-        @include xl{
-            height: 800px;
-        }
+
     }
 
 
     >div:nth-child(2){
+        align-items: center;
+        display: flex;
         grid-area: herotext;
-        padding: 40px 24px;
+        @include header-padding;
         @include green-gradient;
-
-        @include sm{
-            height: 200px;
-        }
-        @include md{
-            height: 480px;
-        }
-        @include lg{
-            height: 640px;
-        }
-        @include xl{
-            height: 720px;
-        }
+        @include hero-height;
     }
 }

@@ -12,46 +12,20 @@ a:link {
 }
 
 
-#off-canvas-container{
-    /* -------------
-        Here are the properties you can changes for the off-canvas navigation-slide
-    ------------- */
-
-    // grid-template-columns: 10px auto 10px;
-    // padding-top: 20px;
-
-    // width of the off canvas navigation
-    // width: 200px;
-
-
-    background-color: $midnight;
-
-    /* close btn */
-    button {
-        background-color: transparent;
-        border: none;
-        color: $light;
-        cursor: pointer;
-        font-size: rem-calc(25);
-        margin-bottom: 20px;
-        outline: none;
-        text-align: right;
-        transition: 0.25s;
-        width: 100%;
-        :hover, :active{
-            background: transparent;
-            border: none;
-            color: $orange;
-            outline: none;
-        }
-        i{
-            color: $light;
-        }
-
+nav {
+    background-color: $black;
+    padding: 10px;
+    @include lg {
+        background-color: $white;
     }
 
-
     ul {
+        @include lg {
+            align-items: center;
+            display: flex;
+            height: 100%;
+        }
+
         li {
             @include link-style;
             margin-bottom: 20px;
@@ -59,46 +33,23 @@ a:link {
                 color: $agua;
                 width: 24px;
             }
+            margin-bottom: 15px;
+            @include lg {
+                margin-bottom: 0;
+                margin-left: 20px;
+            }
+
             a:link,
             a:visited {
                 color: $white;
-            }
-
-            a:active,
-            a:hover {
-                color: $orange;
+                @include lg {
+                    color: $black;
+                }
+                a:active,
+                a:hover {
+                    color: $orange;
+                }
             }
         }
-    }
-}
-
-#logo{
-    left: 16px;
-    position: fixed;
-    top: 16px;
-    img{
-        height: 40px;
-    }
-}
-
-#burger-icon {
-    border: none;
-    color: $black;
-    font-size: rem-calc(22);
-    outline: none;
-    position: fixed;
-    right: 16px;
-    top: 16px;
-    z-index: 100;
-    :hover, :active{
-        background: $orange;
-        border-bottom: 4px solid $sun;
-        color: $white;
-        padding: 8px 12px 6px 12px;
-    }
-    i{
-        background: $light;
-        border-bottom: 4px solid $agua;
-        padding: 8px 12px 6px 12px;
     }
 }

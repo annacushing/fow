@@ -4,13 +4,14 @@
 #faq {
     @include section-padding;
     display: grid;
+    grid-gap: 0;
     grid-template-areas:
     "faq ."
     "questions questions"
     "faqimg faqimg";
-    grid-template-rows: repeat(2, auto);
     grid-template-columns: 70% 30%;
-    grid-gap: 0;
+    grid-template-rows: repeat(2, auto);
+    padding-bottom: 0px;
 
 
     @include md{
@@ -87,6 +88,7 @@
 
             &:hover {
                 color: $orange;
+                cursor: pointer;
                 text-decoration: underline;
                 text-decoration-color: $orange;
             }
@@ -119,9 +121,9 @@
 
     > div:nth-child(3) {
         background-image: url("../img/faq/green-hill.svg");
+        background-position: center right;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center right;
         display: flex;
         height: 457px;
         width: 100%;

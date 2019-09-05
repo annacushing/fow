@@ -247,9 +247,9 @@ html {
     @include lg{
         padding: 40px 32px;
     }
-    :hover{
-        box-shadow: 0 7px 24px 2px rgba(206,206,206,0.60);
-    }
+    // :hover{
+    //     box-shadow: 0 7px 24px 2px rgba(206,206,206,0.60);
+    // }
 }
 
 @mixin colored-circles{

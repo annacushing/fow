@@ -1,45 +1,45 @@
 /* =============
     Hero
 ============= */
-#hero {
+#hero{
+
     display: grid;
     grid-template-areas:
-    "video"
+    "heroimg"
     "herotext";
     grid-template-columns: repeat(1, auto);
-    grid-template-rows: auto 300px;
+    grid-template-rows: 300px auto;
     margin: 0 auto;
-    @include md {
+
+    @include md{
         grid-template-areas:
-        "herotext video";
+        "herotext heroimg";
         grid-template-columns: 40% auto;
         grid-template-rows: repeat(1, auto);
     }
-    @include lg {
+
+    @include lg{
         grid-template-columns: 30% auto;
         grid-template-rows: repeat(1, auto);
     }
 
-    > div:nth-child(1) {
-        // background-image: url("../img/hero/hero.jpg");
-        // background-position: center center;
-        // background-repeat: no-repeat;
-        // background-size: cover;
+
+    >div:nth-child(1){
+        background-image: url('../img/hero/hero.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
-        grid-area: video;
-        height: 50vh;
-  width: 100vw;
-        margin: 0;
+        grid-area: heroimg;
+        width: 100%;
+        margin: 0 auto;
         @include hero-height;
-        object-fit: fill;
-        video{
-            width: 100%;
-            height: 100%;
-        }
+
 
     }
 
-    > div:nth-child(2) {
+
+    >div:nth-child(2){
         align-items: center;
         display: flex;
         grid-area: herotext;
@@ -47,13 +47,46 @@
         @include green-gradient;
         // @include hero-height;
     }
+
+    section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 180px;
+
+    a:link,
+    a:visited {
+        align-items: center;
+        border: 3px solid $white;
+        border-radius: 100px;
+        color: $white;
+        display: inline-block;
+        display: flex;
+        height: 78px;
+        justify-content: center;
+        width: 78px;
+        @include sm {
+            font-size: rem-calc(18);
+            height: 90px;
+            width: 90px;
+        }
+        @include md {
+            border: 4px solid $white;
+            font-size: rem-calc(23);
+            height: 120px;
+            width: 120px;
+        }
+        @include lg {
+            border: 5px solid $white;
+            font-size: rem-calc(32);
+            height: 170px;
+            width: 170px;
+        }
+    }
+
+    a:active,
+    a:hover {
+        background-color: $light;
+        color: $orange;
+    }
 }
-
-
-// #myVideo {
-//   position: fixed;
-//   right: 0;
-//   bottom: 0;
-//   min-width: 100%;
-//   min-height: vh100;
-// }
+}

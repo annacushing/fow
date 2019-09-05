@@ -30,7 +30,7 @@
         "hike"
         "bike"
         "run";
-        grid-template-rows: repeat(3, auto);
+        grid-template-rows: 160px auto auto;
 
         @include md{
             grid-template-areas:
@@ -51,7 +51,8 @@
             "hike run"
             ". run";
             grid-template-columns: 50% 50%;
-            grid-gap: 0px;
+            grid-gap: 0px 16px;
+            margin: 0 auto;
         }
 
         @include xl{

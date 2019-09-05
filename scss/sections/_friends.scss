@@ -4,6 +4,8 @@
 
 #friends{
     @include section-padding;
+    max-width: 1000px;
+    margin: 0 auto;
     // background: $off-white;
 
 

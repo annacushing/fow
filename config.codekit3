@@ -210,7 +210,7 @@
 		},
 	"/img/plan/bike.jpg": {
 		"ft": 16384,
-		"iS": 265952,
+		"iS": 240554,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/plan/bike.jpg",
@@ -221,24 +221,24 @@
 		},
 	"/img/plan/hike.jpg": {
 		"ft": 16384,
-		"iS": 169849,
+		"iS": 217381,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/plan/hike.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/plan/run.jpg": {
 		"ft": 16384,
-		"iS": 203851,
+		"iS": 194176,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/plan/run.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/img/visit/elements.svg": {
@@ -438,16 +438,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/components/texteffects.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/scss/components/texteffects-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/scss/components/texteffects.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -643,6 +633,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/scss/sections/_video.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/sections/_video.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/sections/_visit.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -675,14 +678,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/thanks.html",
-		"oF": 0
-		},
-	"/trail.mp4": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/trail.mp4",
 		"oF": 0
 		}
 	},

@@ -49,7 +49,7 @@
                 <img src="img/nav/logo.svg" alt="logo">
             </section>
             <!-- burger icon -->
-            <section id="burger-icon" >
+            <section id="burger-icon">
                 <i class="fas fa-bars"></i>
             </section>
         </div>
@@ -60,7 +60,15 @@
         <div class="js-off-canvas-overlay" id="overlay"></div>
 
         <section id="hero">
-            <div></div>
+
+
+            <div id="video-back">
+                <video autoplay muted loop id="myVideo">
+                    <source src="trail.mp4" type="video/mp4">
+                </video>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5gZXcZ_gc-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vidbacking"></iframe> -->
+
+            </div>
             <div>
                 <h1>FRIENDS OF THE WISSAHICKON <br><span>let's be friends.</span></h1>
             </div>
@@ -314,42 +322,42 @@
             <div>
                 <h1>TALK TO US</h1>
                 <form action="https://formspree.io/annamcushing@gmail.com" method="POST">
-                        <!-- company name -->
-                        <div>
-                            <label>
-                                <input type="text" placeholder="Company Name" name="Company Name">
-                                <input type="hidden" name="_next" value="http://www.gdovindesigns.com/client/drexel/web2/form/thanks.html" />
-                                <input type="text" name="_gotcha" style="display:none" />
-                            </label>
-                        </div>
-                        <!-- first name -->
-                        <div>
-                            <label>
-                                <input type="text" placeholder="First Name" name="First Name">
-                            </label>
-                        </div>
-                        <!-- last name -->
-                        <div>
-                            <label>
-                                <input type="text" placeholder="Last Name" name="Last Name">
-                            </label>
-                        </div>
-                        <!-- email -->
-                        <div>
-                            <label>
-                                <input type="email" placeholder="Email" name="Email" required>
-                            </label>
-                        </div>
-                        <!-- message -->
-                        <div>
-                            <label>
-                                <textarea placeholder="Message" name="Message"></textarea>
-                            </label>
-                        </div>
-                        <div>
-                            <button type="submit" class="button" value="send">Send</button>
-                        </div>
-                    </form>
+                    <!-- company name -->
+                    <div>
+                        <label>
+                            <input type="text" placeholder="Company Name" name="Company Name">
+                            <input type="hidden" name="_next" value="http://www.gdovindesigns.com/client/drexel/web2/form/thanks.html" />
+                            <input type="text" name="_gotcha" style="display:none" />
+                        </label>
+                    </div>
+                    <!-- first name -->
+                    <div>
+                        <label>
+                            <input type="text" placeholder="First Name" name="First Name">
+                        </label>
+                    </div>
+                    <!-- last name -->
+                    <div>
+                        <label>
+                            <input type="text" placeholder="Last Name" name="Last Name">
+                        </label>
+                    </div>
+                    <!-- email -->
+                    <div>
+                        <label>
+                            <input type="email" placeholder="Email" name="Email" required>
+                        </label>
+                    </div>
+                    <!-- message -->
+                    <div>
+                        <label>
+                            <textarea placeholder="Message" name="Message"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit" class="button" value="send">Send</button>
+                    </div>
+                </form>
                 <!-- <form>
                     <input type="text" placeholder="Name" required>
                     <input type="text" placeholder="Email" required>
@@ -381,6 +389,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <!-- Vidbacking -->
+    <script src="js/jquery.vidbacking.js"></script>
 
     <script src="js/scripts.js"></script>
 </body>

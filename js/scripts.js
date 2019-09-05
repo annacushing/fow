@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
 // You may change this number if you want to increase or decrease the speed of your navigation animtion
 var speedOfAnimation = 0.5;
 var $burger = $("#burger-icon");
@@ -149,3 +149,10 @@ $("nav[data-nav='main-navigation'] a").on("click", openCloseMenu);
 $("#close-btn").on("click", openCloseMenu);
 // close the mobile menu when the overlay link is tapped / click
 $("#overlay").on("click", openCloseMenu);
+
+
+    console.log("fire");
+    $('#video-back').vidbacking({
+	   'masked': true
+    });
+});

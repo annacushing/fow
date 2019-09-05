@@ -86,8 +86,9 @@
             text-decoration-color: $agua;
 
             &:hover {
-                background-color: $orange;
-                color: $white;
+                color: $orange;
+                text-decoration: underline;
+                text-decoration-color: $orange;
             }
         }
 
